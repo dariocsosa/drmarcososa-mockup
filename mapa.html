@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>El Mapa 3R — Dr. Marco Sosa</title>
+<meta name="description" content="El instrumento que el Dr. Marco Sosa usa en consulta para ver cómo distribuyes tus recursos entre los siete roles de tu vida. Cuatro minutos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="envoltura nav-fila">
+    <a class="nav-marca" href="index.html">
+      <img src="assets/sello-redondo.png" alt="">
+      <span>Dr. Marco Sosa</span>
+    </a>
+    <ul class="nav-enlaces">
+      <li><a href="index.html#problemas">Qué trato</a></li>
+      <li><a href="index.html#masterclases">Masterclass</a></li>
+      <li><a href="mapa.html" aria-current="page">El Mapa 3R</a></li>
+      <li><a href="index.html#kits">Kits</a></li>
+      <li><a href="certificacion.html">Para profesionales</a></li>
+    </ul>
+    <a class="boton boton-lleno" href="index.html#consulta">Agendar consulta</a>
+  </div>
+</nav>
+
+<main class="seccion seccion-clara" style="padding-top: clamp(2.5rem, 5vw, 4.5rem)">
+  <div class="envoltura mapa-app">
+
+    <!-- ============ la rueda, fija mientras se responde ============ -->
+    <div class="mapa-lienzo-col">
+      <svg class="rueda-lienzo" id="mapa-svg" viewBox="0 0 420 420" role="img"
+           aria-label="Tu Mapa 3R: siete roles por tres dimensiones. Cada segmento crece con tu respuesta."></svg>
+      <p class="suave" style="text-align: center; font-size: 0.8rem; max-width: 34ch; margin: 1.5rem auto 0">
+        La rueda se dibuja con tus respuestas. Una vida repartida traza un círculo parejo;
+        una cargada hacia un lado, no.
+      </p>
+    </div>
+
+    <div>
+      <!-- ============ intro ============ -->
+      <div id="intro">
+        <p class="rotulo">Instrumento de consulta</p>
+        <h1 class="t-titulo">El Mapa 3R</h1>
+        <p class="suave" style="margin-top: 1.4rem; font-size: var(--t-medio); line-height: 1.55">
+          Tu vida se organiza en siete roles, y ninguno se vive aislado: lo que ocurre en uno se
+          expresa en los otros seis.
+        </p>
+        <p class="suave">
+          Este instrumento mide tres cosas en cada rol —lo que inviertes, lo que recibes y cómo
+          te ven— y las cruza. En consulta lo uso para encontrar en cinco minutos de dónde viene
+          un malestar que los exámenes no explican.
+        </p>
+
+        <ul class="tresR">
+          <li><b>Recursos</b><span>Lo que inviertes: tiempo, dinero, energía, atención.</span></li>
+          <li><b>Recompensas</b><span>Lo que recibes de vuelta: afecto, apoyo, estabilidad.</span></li>
+          <li><b>Reflejos</b><span>La imagen que proyectas: desde qué rol te identifican.</span></li>
+        </ul>
+
+        <p class="suave" style="font-size: 0.88rem">
+          Veintiún preguntas, unos cuatro minutos. <strong>No se guarda nada</strong>: el
+          resultado se calcula en tu navegador. El correo solo se pide al final, y solo si quieres
+          el informe ampliado.
+        </p>
+
+        <div class="acciones" style="margin-top: 2rem">
+          <button class="boton boton-verde boton-grande" id="empezar" type="button">Empezar el Mapa</button>
+        </div>
+      </div>
+
+      <!-- ============ preguntas ============ -->
+      <div id="test" hidden>
+        <div class="progreso" id="progreso"></div>
+        <p class="rol-actual" id="rol-actual">Rol 1 de 7</p>
+        <div id="preguntas"></div>
+        <div class="mapa-nav">
+          <button class="boton boton-linea" id="atras" type="button">Atrás</button>
+          <button class="boton boton-verde" id="sigue" type="button" disabled>Siguiente</button>
+        </div>
+      </div>
+
+      <!-- ============ resultado ============ -->
+      <div id="resultado" hidden>
+        <p class="rotulo">Tu lectura</p>
+        <h2 class="t-titulo">Esto es lo que veo</h2>
+        <p class="suave" style="margin-top: 1.2rem">
+          No es un diagnóstico. Es una fotografía de cómo estás repartiendo lo que tienes —y de
+          dónde conviene mirar primero.
+        </p>
+
+        <div id="lectura"></div>
+
+        <div class="informe">
+          <h3>El informe ampliado</h3>
+          <p>
+            Te lo mando en PDF con tu rueda, la lectura completa de los siete roles y las
+            preguntas de reflexión del capítulo 1 del libro.
+          </p>
+          <form class="suscribir" id="forma-informe" style="margin-top: 1.2rem">
+            <input type="hidden" id="segmento" name="segmento">
+            <input type="email" placeholder="Tu correo" aria-label="Tu correo" required>
+            <button class="boton boton-verde" type="submit">Enviármelo</button>
+          </form>
+        </div>
+
+        <div class="acciones" style="margin-top: 2.5rem">
+          <a class="boton boton-lleno" href="index.html#consulta">Trabajarlo en consulta</a>
+          <a class="boton boton-linea" href="curso.html">Ver el curso</a>
+          <button class="boton boton-linea" id="reiniciar" type="button">Volver a hacerlo</button>
+        </div>
+
+        <p class="suave" style="font-size: 0.82rem; margin-top: 2rem">
+          Este contenido es informativo y educativo. No constituye diagnóstico ni tratamiento, y
+          no reemplaza la consulta médica.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie-reja">
+      <div>
+        <img src="assets/sello-redondo.png" alt="" style="width: 64px; margin-bottom: 1.2rem">
+        <p style="max-width: 36ch">
+          El Mapa 3R es una herramienta clínica desarrollada por el Dr. Marco Sosa y publicada en
+          el capítulo 1 de <em>Vive tus emociones, gestiona sus reacciones</em>.
+        </p>
+      </div>
+      <div>
+        <h4>El sitio</h4>
+        <ul>
+          <li><a href="index.html#problemas">Qué trato</a></li>
+          <li><a href="index.html#masterclases">Masterclass</a></li>
+          <li><a href="index.html#kits">Kits</a></li>
+          <li><a href="curso.html">Formación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="certificacion.html">Certificación</a></li>
+          <li><a href="certificacion.html#red">La Red</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pie-legal">
+      Dr. Marco Aurelio Sosa Giraldo. Médico, registro 050330. Los contenidos de este sitio son
+      de carácter informativo y educativo, no constituyen diagnóstico ni tratamiento y no
+      reemplazan la consulta médica presencial.
+    </p>
+  </div>
+</footer>
+
+<script src="mapa.js"></script>
+</body>
+</html>

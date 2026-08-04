@@ -1,0 +1,81 @@
+/* ============================================================
+   Dr. Marco Sosa — Medicina Integrativa
+   Tokens de marca · fuente única de verdad visual
+   Derivados del sello original (muestreo directo del PNG).
+   Ningún color se escribe a mano fuera de este archivo.
+   ============================================================ */
+
+:root {
+  /* ---------- Color ---------- */
+
+  /* Verdes — del disco del sello y de la M del monograma */
+  --verde-consultorio: #243B2B;   /* el más profundo. Fondos de sección, pie */
+  --verde-sello:       #2F4E37;   /* el verde del sello. Campo principal oscuro */
+  --verde-salvia:      #7E8A62;   /* la M del monograma. Secundario, bordes vivos */
+  --verde-tenue:       #C7CDB8;   /* salvia rebajado. Texto secundario sobre oscuro */
+
+  /* Dorados — de la S del monograma */
+  --dorado:            #B09878;   /* acento. Filetes, subrayados, la rueda */
+  --dorado-claro:      #D4C0A0;   /* hover y estados activos sobre oscuro */
+
+  /* Neutros */
+  --crema:             #EDE3CC;   /* tipografía del sello. Texto sobre verde */
+  --hueso:             #F4F5F0;   /* campo claro, con matiz salvia. NO es crema cálido */
+  --hueso-hundido:     #E9EBE3;   /* tarjetas y bloques sobre hueso */
+  --tinta:             #1A2119;   /* texto de lectura */
+  --tinta-suave:       #4A5449;   /* texto secundario sobre claro */
+  --linea:             #D5D9CD;   /* filetes sobre claro */
+
+  /* Semánticos */
+  --fondo:             var(--hueso);
+  --texto:             var(--tinta);
+  --acento:            var(--dorado);
+
+  /* ---------- Tipografía ---------- */
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --texto-fuente: "Archivo", "Segoe UI", system-ui, sans-serif;
+
+  /* Escala — proporción 1.25, fluida entre 380px y 1280px */
+  --t-micro: 0.75rem;
+  --t-pequeno: 0.875rem;
+  --t-base: clamp(1rem, 0.97rem + 0.15vw, 1.125rem);
+  --t-medio: clamp(1.25rem, 1.15rem + 0.45vw, 1.5rem);
+  --t-grande: clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem);
+  --t-titulo: clamp(2.25rem, 1.7rem + 2.4vw, 4rem);
+  --t-hero: clamp(2.75rem, 1.9rem + 3.8vw, 5.5rem);
+
+  /* Ejes variables de Fraunces — el carácter de la marca */
+  --wonk-display: 1;    /* activa las formas irregulares en titulares */
+  --soft-display: 40;   /* suaviza las terminaciones. Cálido, no severo */
+
+  /* ---------- Espacio ---------- */
+  --e-1: 0.5rem;
+  --e-2: 1rem;
+  --e-3: 1.5rem;
+  --e-4: 2.5rem;
+  --e-5: 4rem;
+  --e-6: 6rem;
+  --e-7: 9rem;
+
+  --ancho-lectura: 68ch;
+  --ancho-max: 1200px;
+  --margen: clamp(1.25rem, 5vw, 4rem);
+
+  /* ---------- Forma ---------- */
+  /* El sello es un círculo. Los radios de la marca son generosos o nulos:
+     nada de 8px genéricos. */
+  --radio-nulo: 0;
+  --radio-suave: 4px;
+  --radio-disco: 999px;
+
+  --filete: 1px solid var(--linea);
+  --filete-dorado: 1px solid var(--dorado);
+
+  /* ---------- Movimiento ---------- */
+  --paso: 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  --paso-largo: 620ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --paso: 1ms; --paso-largo: 1ms; }
+}
