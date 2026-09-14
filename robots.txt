@@ -1,2 +1,3 @@
+# Sitio en ensayo. No indexar.
 User-agent: *
 Disallow: /

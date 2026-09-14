@@ -513,3 +513,59 @@ img { max-width: 100%; display: block; }
 @media (max-width: 800px) { .autoridad-fila { grid-template-columns: repeat(2, 1fr); } }
 .autoridad .credencial b { display: block; font-family: var(--display); font-weight: 700; font-size: 1.9rem; color: var(--dorado-claro); line-height: 1; margin-bottom: 0.35rem; }
 .autoridad .credencial span { font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--verde-tenue); }
+
+/* ============================================================
+   Publicación — piezas que el mockup no tenía
+   ============================================================ */
+
+/* enlaces legales del pie */
+.pie-legales {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem;
+  list-style: none; margin: 2.5rem 0 0; padding: 1.4rem 0 0;
+  border-top: 1px solid color-mix(in srgb, var(--dorado) 18%, transparent);
+  font-size: 0.8rem;
+}
+.pie-legales a { color: var(--verde-tenue); }
+
+/* autorización de tratamiento de datos — Ley 1581 de 2012 */
+.consentimiento {
+  flex-basis: 100%; display: flex; gap: 0.6rem; align-items: flex-start;
+  margin-top: 0.9rem; font-size: 0.78rem; line-height: 1.5;
+  color: color-mix(in srgb, var(--verde-tenue) 85%, transparent);
+}
+.consentimiento input { margin-top: 0.15rem; accent-color: var(--dorado); flex-shrink: 0; }
+.consentimiento a { color: var(--dorado-claro); text-underline-offset: 3px; }
+.seccion-clara .consentimiento { color: var(--tinta-suave); }
+.seccion-clara .consentimiento a { color: var(--verde-sello); }
+
+/* ============ páginas de texto legal ============ */
+.legal { padding-block: clamp(3.5rem, 7vw, 6rem) clamp(4rem, 8vw, 7rem); }
+.legal-cuerpo { max-width: 72ch; }
+.legal-cuerpo h2 {
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+  margin: 3rem 0 1rem; padding-top: 1.6rem;
+  border-top: 1px solid var(--linea);
+}
+.legal-cuerpo h2:first-of-type { margin-top: 2.5rem; }
+.legal-cuerpo h3 { font-size: 1.1rem; margin: 1.8rem 0 0.6rem; }
+.legal-cuerpo p, .legal-cuerpo li { font-size: 0.94rem; color: var(--tinta-suave); line-height: 1.7; }
+.legal-cuerpo ul, .legal-cuerpo ol { margin: 0 0 1.2rem; padding-left: 1.3rem; display: grid; gap: 0.5rem; }
+.legal-cuerpo a { color: var(--verde-sello); text-decoration: underline; text-underline-offset: 3px; }
+.legal-cuerpo strong { color: var(--tinta); }
+.legal-fecha {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--tinta-suave); margin-top: 1.5rem;
+}
+.legal-aviso {
+  background: var(--hueso-hundido); border-left: 3px solid var(--dorado);
+  padding: 1.2rem 1.4rem; margin: 2rem 0; font-size: 0.88rem;
+}
+.legal-aviso p { margin: 0; }
+.legal-cuerpo dl { margin: 0 0 1.2rem; }
+.legal-cuerpo dt { font-weight: 600; color: var(--tinta); margin-top: 1rem; font-size: 0.94rem; }
+.legal-cuerpo dd { margin: 0.2rem 0 0; font-size: 0.94rem; color: var(--tinta-suave); }
+
+/* ============ 404 ============ */
+.perdido { min-height: 70vh; display: grid; place-items: center; text-align: center; padding-block: 6rem; }
+.perdido h1 { font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem); color: var(--crema); }
+.perdido p { color: var(--verde-tenue); max-width: 46ch; margin-inline: auto; }
