@@ -1,0 +1,19 @@
+{
+  "_lea": "Registro de certificados emitidos. Lo genera Web/generar_red.py desde el CSV de aprobados. Toda entrada con es_ejemplo:true bloquea el modo --indexar.",
+  "actualizado": "2026-09-15",
+  "certificados": [
+    {
+      "codigo": "0000-0000",
+      "es_ejemplo": true,
+      "nombre": "Dra. Ejemplo Apellido",
+      "documento": "C.C. 0.000.000",
+      "programa": "Diplomatura en Medicina Integrativa",
+      "horas": 124,
+      "modulos": ["Sueroterapia", "Obesidad y sobrepeso", "Ozonoterapia",
+                  "Plasma rico en factores de crecimiento", "Péptidos"],
+      "emitido": "2026-12-15",
+      "cohorte": "Santo Domingo, octubre 2026",
+      "estado": "vigente"
+    }
+  ]
+}

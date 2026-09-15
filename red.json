@@ -1,0 +1,20 @@
+{
+  "_lea": "Directorio público de la Red. Lo genera Web/generar_red.py desde el CSV de certificados; se puede editar a mano mientras la cohorte no exista. Toda entrada con es_ejemplo:true se muestra marcada como demostración y bloquea el modo --indexar.",
+  "actualizado": "2026-09-15",
+  "miembros": [
+    {
+      "slug": "ejemplo-demostracion",
+      "es_ejemplo": true,
+      "nombre": "Dra. Ejemplo Apellido",
+      "titulo": "Médica · Reg. 000000",
+      "ciudad": "Medellín",
+      "departamento": "Antioquia",
+      "pais": "Colombia",
+      "sede": "Nombre del consultorio",
+      "tecnicas": ["Sueroterapia", "Ozonoterapia"],
+      "certificado": "0000-0000",
+      "desde": "2026",
+      "contacto": ""
+    }
+  ]
+}

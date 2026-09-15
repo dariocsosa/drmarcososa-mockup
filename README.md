@@ -27,16 +27,18 @@ Estado actual: publicado en el dominio real, con `noindex` — no debe aparecer 
 
 ## Pendientes que el build detectó
 
+- certificado.html: dato del titular pendiente «correo de contacto»
+- certificados.json: perfil de demostración pendiente de quitar — «Dra. Ejemplo Apellido» no es una persona real
 - curso.html: enlace pendiente «inscripcion_curso_3r»
+- diplomatura.html: enlace pendiente «hotmart_curso_suelto»
+- diplomatura.html: enlace pendiente «hotmart_diplomatura»
+- gracias.html: enlace pendiente «guia_pdf»
 - index.html: enlace pendiente «agenda_virtual»
 - index.html: enlace pendiente «agenda»
-- index.html: enlace pendiente «doctoralia»
-- index.html: enlace pendiente «instagram»
-- index.html: enlace pendiente «linkedin»
 - index.html: enlace pendiente «tienda_kit_longevidad»
-- index.html: enlace pendiente «youtube»
 - privacidad.html: dato del titular pendiente «correo de contacto»
 - privacidad.html: dato del titular pendiente «documento de identificación del responsable»
 - privacidad.html: dato del titular pendiente «teléfono de contacto»
+- red.json: perfil de demostración pendiente de quitar — «Dra. Ejemplo Apellido» no es una persona real
 - terminos.html: dato del titular pendiente «correo de contacto»
 - terminos.html: dato del titular pendiente «documento de identificación del responsable»

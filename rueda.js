@@ -165,20 +165,4 @@
 
   document.querySelectorAll('.rueda-lienzo').forEach(construir);
 
-  /* ---------- revelado de secciones al hacer scroll ---------- */
-  const aRevelar = document.querySelectorAll('.revelar');
-  const revelarTodo = () => aRevelar.forEach(n => n.classList.add('visible'));
-
-  if (aRevelar.length && 'IntersectionObserver' in window && !sinMovimiento) {
-    const io = new IntersectionObserver((entradas, obs) => {
-      entradas.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0, rootMargin: '0px 0px -80px 0px' });
-    aRevelar.forEach(n => io.observe(n));
-    // Red de seguridad: si algo no se reveló en 4 s, se muestra igual.
-    setTimeout(revelarTodo, 4000);
-  } else {
-    revelarTodo();
-  }
 })();

@@ -11,6 +11,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="estilos.css">
+<script>
+  // Solo si hay JavaScript se habilita el estado oculto del revelado.
+  // Sin esto, un fallo del script dejaría la página en blanco.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js');
+  }
+</script>
 </head>
 <body>
 
@@ -20,7 +27,18 @@
       <img src="assets/sello-redondo.png" alt="">
       <span>Dr. Marco Sosa</span>
     </a>
-    <a class="boton boton-lleno" href="index.html">Volver al inicio</a>
+    <button class="nav-boton" type="button" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-barras" aria-hidden="true"></span>
+      <span class="solo-lectores">Menú</span>
+    </button>
+    <ul class="nav-enlaces" id="nav-menu">
+      <li><a href="index.html#problemas" data-nav="problemas">Qué trato</a></li>
+      <li><a href="mapa.html" data-nav="mapa">El Mapa 3R</a></li>
+      <li><a href="diplomatura.html" data-nav="diplomatura">Diplomatura</a></li>
+      <li><a href="red.html" data-nav="red">La Red</a></li>
+      <li><a href="curso.html" data-nav="curso">Para ti</a></li>
+    </ul>
+    <a class="boton boton-lleno nav-cta" href="index.html#consulta">Agendar consulta</a>
   </div>
 </nav>
 
@@ -38,5 +56,6 @@
   </div>
 </main>
 
+<script src="revelar.js"></script>
 </body>
 </html>
