@@ -884,3 +884,27 @@ img { max-width: 100%; display: block; }
   .bifurcacion, .sedes, .masterclases, .libros { grid-template-columns: 1fr; }
   .cita-datos { gap: 1rem 1.6rem; }
 }
+
+/* ============ franja de lanzamiento (temporal, hasta el 6 de octubre) ============ */
+.franja-vivo {
+  background: var(--dorado);
+  color: var(--verde-consultorio);
+  padding-block: 1.4rem;
+}
+.franja-vivo-fila {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 1.2rem var(--reja-hueco);
+}
+.franja-vivo .rotulo { color: var(--verde-consultorio); }
+.franja-vivo .rotulo::before { background: var(--verde-consultorio); }
+.franja-vivo-titulo {
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(1.15rem, 0.95rem + 0.8vw, 1.6rem);
+  margin: 0.4rem 0 0; line-height: 1.2; max-width: 30ch;
+}
+.franja-vivo-nota { font-size: 0.84rem; margin: 0.3rem 0 0; opacity: 0.8; }
+.franja-vivo .boton-lleno { background: var(--verde-consultorio); color: var(--crema); }
+.franja-vivo .boton-lleno:hover { background: var(--verde-sello); }
+.franja-vivo .boton-linea { border-color: color-mix(in srgb, var(--verde-consultorio) 45%, transparent); }
+/* el nav es fijo: la franja no puede quedar debajo */
+.franja-vivo + .seccion { scroll-margin-top: 5rem; }

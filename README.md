@@ -39,6 +39,8 @@ Estado actual: publicado en el dominio real, con `noindex` — no debe aparecer 
 - privacidad.html: dato del titular pendiente «correo de contacto»
 - privacidad.html: dato del titular pendiente «documento de identificación del responsable»
 - privacidad.html: dato del titular pendiente «teléfono de contacto»
+- promocion.html: dato del titular pendiente «correo de contacto»
+- promocion.html: dato del titular pendiente «documento de identificación del responsable»
 - red.json: perfil de demostración pendiente de quitar — «Dra. Ejemplo Apellido» no es una persona real
 - terminos.html: dato del titular pendiente «correo de contacto»
 - terminos.html: dato del titular pendiente «documento de identificación del responsable»
