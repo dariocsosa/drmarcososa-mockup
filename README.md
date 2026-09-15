@@ -8,10 +8,10 @@ La fuente está en el repositorio de trabajo, en `Web/mockup/`, y se publica con
 python3 Web/publicar.py --dominio
 ```
 
-Estado actual: publicado en la URL de ensayo de GitHub, con `noindex` — no debe aparecer en Google.
+Estado actual: publicado en el dominio real, con `noindex` — no debe aparecer en Google.
 
-- Base: https://dariocsosa.github.io/drmarcososa-mockup
-- Términos de uso y política de privacidad: versión 1.0, 2026-09-14
+- Base: https://drmarcososa.com
+- Términos de uso y política de privacidad: versión 1.0, 2026-09-15
 
 ## Páginas
 
