@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Términos de uso — Dr. Marco Sosa</title>
-<meta name="description" content="Condiciones de uso de drmarcososa.com, de la academia y de los cursos del Dr. Marco Sosa: alcance del contenido, propiedad intelectual, pagos, certificados y responsabilidades.">
+<meta name="description" content="Condiciones de uso de drmarcososa.com, de la academia y de los cursos del Dr. Marco Sosa: alcance del contenido, propiedad intelectual, cursos y diplomatura, certificados y responsabilidades.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
     document.documentElement.classList.add('js');
   }
 </script>
+<script src="medir.js" defer></script>
 
 <!-- ===== generado por Web/publicar.py — no editar acá ===== -->
 <link rel="canonical" href="https://drmarcososa.com/terminos.html">
@@ -26,21 +27,21 @@
 <meta property="og:locale" content="es_CO">
 <meta property="og:site_name" content="Dr. Marco Sosa">
 <meta property="og:title" content="Términos de uso — Dr. Marco Sosa">
-<meta property="og:description" content="Condiciones de uso de drmarcososa.com, de la academia y de los cursos del Dr. Marco Sosa: alcance del contenido, propiedad intelectual, pagos, certificados y responsabilidades.">
+<meta property="og:description" content="Condiciones de uso de drmarcososa.com, de la academia y de los cursos del Dr. Marco Sosa: alcance del contenido, propiedad intelectual, cursos y diplomatura, certificados y responsabilidades.">
 <meta property="og:url" content="https://drmarcososa.com/terminos.html">
 <meta property="og:image" content="https://drmarcososa.com/assets/retrato-estudio.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Términos de uso — Dr. Marco Sosa">
-<meta name="twitter:description" content="Condiciones de uso de drmarcososa.com, de la academia y de los cursos del Dr. Marco Sosa: alcance del contenido, propiedad intelectual, pagos, certificados y responsabilidades.">
+<meta name="twitter:description" content="Condiciones de uso de drmarcososa.com, de la academia y de los cursos del Dr. Marco Sosa: alcance del contenido, propiedad intelectual, cursos y diplomatura, certificados y responsabilidades.">
 <meta name="twitter:image" content="https://drmarcososa.com/assets/retrato-estudio.jpg">
 <link rel="icon" href="assets/sello-redondo.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/sello-redondo.png">
-<meta name="theme-color" content="#243B2B">
+<meta name="theme-color" content="#1F5142">
 <!-- ===== fin del bloque generado ===== -->
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" aria-label="Principal">
   <div class="envoltura nav-fila">
     <a class="nav-marca" href="index.html">
       <img src="assets/sello-redondo.png" alt="">
@@ -51,21 +52,23 @@
       <span class="solo-lectores">Menú</span>
     </button>
     <ul class="nav-enlaces" id="nav-menu">
-      <li><a href="index.html#problemas" data-nav="problemas">Qué trato</a></li>
-      <li><a href="mapa.html" data-nav="mapa">El Mapa 3R</a></li>
-      <li><a href="diplomatura.html" data-nav="diplomatura">Diplomatura</a></li>
-      <li><a href="red.html" data-nav="red">La Red</a></li>
-      <li><a href="curso.html" data-nav="curso">Para ti</a></li>
+      <li><a href="index.html" data-nav="inicio">Inicio</a></li>
+      <li><a href="masterclass.html" data-nav="masterclass">Masterclasses</a></li>
+      <li><a href="consultas.html" data-nav="consultas">Consultas</a></li>
+      <li><a href="diplomatura.html" data-nav="formacion">Formación</a></li>
+      <li><a href="recursos.html" data-nav="recursos">Recursos</a></li>
+      <li><a href="sobre.html" data-nav="sobre">Sobre el Dr. Marco</a></li>
+      <li class="nav-cta-movil"><a href="masterclass.html#registro" data-origen="nav-menu-registro">Regístrate gratis</a></li>
     </ul>
-    <a class="boton boton-lleno nav-cta" href="index.html#consulta">Agendar consulta</a>
+    <a class="boton boton-lleno nav-cta" href="masterclass.html#registro" data-origen="nav-cta-registro">Regístrate gratis</a>
   </div>
 </nav>
 
 <main class="seccion seccion-clara legal">
   <div class="envoltura">
     <p class="rotulo">Legal</p>
-    <h1 class="t-titulo" style="max-width: 14ch">Términos de uso</h1>
-    <p class="legal-fecha">Vigente desde el 14 de septiembre de 2026 · versión 1.0</p>
+    <h1 class="t-titulo legal-h1">Términos de uso</h1>
+    <p class="legal-fecha">Vigente desde el 21 de septiembre de 2026 · versión 2.0</p>
 
     <div class="legal-cuerpo">
 
@@ -83,13 +86,34 @@
         </p>
       </div>
 
-      <h2>1. Quién opera el sitio</h2>
+      <nav class="legal-indice" aria-labelledby="indice-terminos">
+        <p class="legal-indice-titulo" id="indice-terminos">En esta página</p>
+        <ol>
+          <li><a href="#opera">Quién opera el sitio</a></li>
+          <li><a href="#contenido">Naturaleza del contenido</a></li>
+          <li><a href="#vinculo">Declaración de vínculo comercial</a></li>
+          <li><a href="#propiedad">Propiedad intelectual</a></li>
+          <li><a href="#formacion">Cursos y diplomatura</a></li>
+          <li><a href="#acceso">Cuenta y acceso a la academia</a></li>
+          <li><a href="#certificados">Certificados</a></li>
+          <li><a href="#pagos">Compras, retracto y promociones</a></li>
+          <li><a href="#consulta">Consulta médica</a></li>
+          <li><a href="#terceros">Enlaces y servicios de terceros</a></li>
+          <li><a href="#disponibilidad">Disponibilidad y cambios</a></li>
+          <li><a href="#responsabilidad">Límite de responsabilidad</a></li>
+          <li><a href="#datos">Datos personales y cookies</a></li>
+          <li><a href="#ley">Ley aplicable</a></li>
+          <li><a href="#modificaciones">Modificaciones</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="opera">1. Quién opera el sitio</h2>
       <p>
         Dr. Marco Aurelio Sosa Giraldo, médico con registro 050330, identificado con
         <mark data-pendiente="documento">por definir</mark>, actuando como persona natural. Contacto: <mark data-pendiente="correo">por definir</mark>.
       </p>
 
-      <h2>2. Naturaleza del contenido</h2>
+      <h2 id="contenido">2. Naturaleza del contenido</h2>
       <ul>
         <li>Todo el contenido del sitio —artículos, videos, masterclass, descargables, el Mapa 3R—
             es <strong>informativo y educativo</strong>.</li>
@@ -103,6 +127,10 @@
         <li>Si tienes un síntoma que te preocupa, consulta con tu médico. Si es una urgencia,
             acude a un servicio de urgencias. Este sitio no atiende urgencias.</li>
       </ul>
+      <p>
+        El detalle está en el <a href="aviso-educativo.html">aviso educativo</a>, que hace parte
+        de estos términos.
+      </p>
 
       <h3>El Mapa 3R</h3>
       <p>
@@ -113,7 +141,7 @@
         cuenta propia.
       </p>
 
-      <h2>3. Declaración de vínculo comercial</h2>
+      <h2 id="vinculo">3. Declaración de vínculo comercial</h2>
       <p>
         Dr. Marco Sosa se desempeña como Director Científico de Lumineight, marca en cuyo
         desarrollo de fórmulas participa y sobre cuyas ventas percibe una participación. Esta
@@ -131,7 +159,7 @@
         externo y estará identificado como tal, con sus propias condiciones.
       </p>
 
-      <h2>4. Propiedad intelectual</h2>
+      <h2 id="propiedad">4. Propiedad intelectual</h2>
       <p>
         Los textos, videos, ilustraciones, marcas, el sello, el nombre <em>Mapa 3R</em>, el marco
         de las 3R y los siete roles, los guiones de las masterclass y el material de los cursos son
@@ -160,7 +188,24 @@
         correspondan.
       </p>
 
-      <h2>5. Cuenta y acceso a la academia</h2>
+      <h2 id="formacion">5. Cursos y diplomatura</h2>
+      <ul>
+        <li>La <a href="diplomatura.html">Diplomatura en Nuevas Terapias Alternativas para la
+            Salud y el Bienestar</a> está formada por <strong>cinco cursos</strong> grabados,
+            virtuales y asincrónicos. <strong>Cada curso se vende también por separado</strong>;
+            la diplomatura es la compra de los cinco juntos.</li>
+        <li>Los cursos se publican de forma progresiva. El acceso dura un año desde la matrícula
+            o el pago. Las condiciones están en las <a href="compras.html">condiciones de
+            compra</a>.</li>
+        <li>La <strong>práctica presencial es opcional</strong>, se ofrece solo a quienes
+            adquieren la diplomatura completa, tiene un valor adicional y <strong>no suma
+            horas</strong> a la formación virtual. No incluye tiquetes, alojamiento ni gastos de
+            viaje.</li>
+        <li>Los cursos para profesionales son formación continua: no conducen a título ni
+            habilitan por sí mismos para prestar servicios de salud.</li>
+      </ul>
+
+      <h2 id="acceso">6. Cuenta y acceso a la academia</h2>
       <ul>
         <li>El registro exige datos veraces y actualizados. Tú respondes por lo que hagan con tu
             cuenta.</li>
@@ -176,36 +221,32 @@
             material.</li>
       </ul>
 
-      <h2>6. Certificados</h2>
+      <h2 id="certificados">7. Certificados</h2>
       <ul>
         <li>Los certificados acreditan la <strong>asistencia y aprobación de un programa de
             educación continua</strong>. No constituyen título de educación formal, no otorgan
             especialidad y no habilitan por sí mismos para prestar un servicio de salud.</li>
         <li>La habilitación de servicios y el ejercicio de cada técnica se rigen por la normativa
             sanitaria vigente y son responsabilidad exclusiva de cada profesional.</li>
-        <li>Cada certificado lleva un código verificable en este sitio.</li>
+        <li>Cada certificado lleva un código verificable en
+            <a href="certificado.html">este sitio</a>.</li>
         <li>Se emite solo a quien cumpla los requisitos de asistencia y evaluación del programa.</li>
       </ul>
 
-      <h2>7. Pagos, retracto y reembolsos</h2>
+      <h2 id="pagos">8. Compras, retracto y promociones</h2>
       <ul>
-        <li>Los precios se indican en la moneda señalada en cada página e incluyen los impuestos
-            que apliquen, salvo indicación expresa.</li>
-        <li><strong>Derecho de retracto.</strong> En las ventas a distancia, la Ley 1480 de 2011
-            reconoce cinco días hábiles para retractarse desde la compra, salvo en los casos que la
-            misma ley exceptúa —entre ellos los servicios de ejecución inmediata y el contenido
-            digital ya consumido. Para ejercerlo, escribe a <mark data-pendiente="correo">por definir</mark>.</li>
-        <li><strong>Garantía de satisfacción.</strong> Además del retracto legal, en los cursos
-            para pacientes hay siete días calendario desde la compra para pedir la devolución del
-            dinero sin explicar por qué.</li>
+        <li>Los precios, el medio de pago, el acceso y lo que incluye cada programa están en las
+            <a href="compras.html">condiciones de compra</a>.</li>
+        <li>El derecho de retracto de la Ley 1480 de 2011, sus excepciones, las garantías y la
+            reversión del pago están en <a href="devoluciones.html">retracto y
+            devoluciones</a>. Para ejercerlos, escribe a <mark data-pendiente="correo">por definir</mark>.</li>
+        <li>Las reglas de las promociones están en <a href="promocion.html">promociones</a>.</li>
         <li>Cuando la inscripción se realiza a través de una distribuidora o promotor local, el
             recaudo, la facturación y la devolución los gestiona esa parte, conforme a lo que haya
             informado al momento de la venta.</li>
-        <li>El consumo sustancial del material de un programa —más de la cuarta parte de sus
-            contenidos— excluye la devolución por garantía de satisfacción.</li>
       </ul>
 
-      <h2>8. Consulta médica</h2>
+      <h2 id="consulta">9. Consulta médica</h2>
       <p>
         El agendamiento a través del sitio es solicitud de cita, no atención médica. La atención es
         <strong>particular, sin intermediación de EPS</strong>, y se rige por la Ley 23 de 1981 y
@@ -214,21 +255,21 @@
         inasistencia se informan al agendar.
       </p>
 
-      <h2>9. Enlaces y servicios de terceros</h2>
+      <h2 id="terceros">10. Enlaces y servicios de terceros</h2>
       <p>
         El sitio enlaza a plataformas de terceros —aula virtual, video, agenda, medios de pago,
         canales de venta—. Cada una tiene sus propios términos y políticas, que rigen tu relación
         con ella. No se responde por su contenido, disponibilidad ni prácticas.
       </p>
 
-      <h2>10. Disponibilidad y cambios</h2>
+      <h2 id="disponibilidad">11. Disponibilidad y cambios</h2>
       <p>
         El sitio se ofrece «tal como está». Puede haber interrupciones por mantenimiento o por
         causas ajenas. Los contenidos, programas y precios pueden cambiar; los cambios no afectan
         inscripciones ya pagadas.
       </p>
 
-      <h2>11. Límite de responsabilidad</h2>
+      <h2 id="responsabilidad">12. Límite de responsabilidad</h2>
       <p>
         Dentro de lo permitido por la ley, no se responde por decisiones que tomes con base en el
         contenido informativo del sitio sin consultar a tu médico, ni por el uso que un profesional
@@ -237,30 +278,42 @@
         derivada de la atención médica efectivamente prestada, que se rige por sus propias normas.
       </p>
 
-      <h2>12. Datos personales</h2>
+      <h2 id="datos">13. Datos personales y cookies</h2>
       <p>
         El tratamiento de datos se rige por la
-        <a href="privacidad.html">política de privacidad y tratamiento de datos</a>, que hace parte
+        <a href="datos.html">Política de tratamiento de datos personales</a>, resumida en el
+        <a href="privacidad.html">aviso de privacidad</a>. El uso de cookies y almacenamiento del
+        navegador está en la <a href="cookies.html">política de cookies</a>. Los tres hacen parte
         integral de estos términos.
       </p>
 
-      <h2>13. Ley aplicable</h2>
+      <h2 id="ley">14. Ley aplicable</h2>
       <p>
         Estos términos se rigen por la ley colombiana. Las controversias se someten a los jueces de
         la República de Colombia. En asuntos de consumo, la autoridad competente es la
-        <a href="https://www.sic.gov.co/" rel="noopener" target="_blank">Superintendencia de
+        <a href="https://www.sic.gov.co/" rel="noopener" target="_blank" rel="noopener">Superintendencia de
         Industria y Comercio</a>.
       </p>
 
-      <h2>14. Modificaciones</h2>
+      <h2 id="modificaciones">15. Modificaciones</h2>
       <p>
         Estos términos pueden actualizarse. La versión vigente es siempre la publicada en esta
         página, con su fecha. El uso del sitio después de una actualización implica su aceptación.
       </p>
 
-      <p style="margin-top: 3rem">
-        <a href="privacidad.html">Ver la política de privacidad →</a>
-      </p>
+      <nav class="legal-relacionados" aria-labelledby="relacionados-titulo">
+        <p class="legal-indice-titulo" id="relacionados-titulo">Documentos legales</p>
+        <ul>
+          <li><a href="privacidad.html">Aviso de privacidad</a></li>
+          <li><a href="datos.html">Política de tratamiento de datos</a></li>
+          <li><a href="terminos.html" aria-current="page">Términos de uso</a></li>
+          <li><a href="cookies.html">Política de cookies</a></li>
+          <li><a href="compras.html">Condiciones de compra</a></li>
+          <li><a href="devoluciones.html">Retracto y devoluciones</a></li>
+          <li><a href="promocion.html">Promociones</a></li>
+          <li><a href="aviso-educativo.html">Aviso educativo</a></li>
+        </ul>
+      </nav>
 
     </div>
   </div>
@@ -277,49 +330,54 @@
         </p>
       </div>
       <div>
-        <h4>Para ti</h4>
+        <h2 class="pie-titulo">El sitio</h2>
         <ul>
-          <li><a href="index.html#problemas">Qué trato</a></li>
-          <li><a href="mapa.html">El Mapa 3R</a></li>
-          <li><a href="guia.html">La guía de obesidad</a></li>
-          <li><a href="curso.html">El curso de las 3R</a></li>
-          <li><a href="index.html#consulta">Consulta</a></li>
+          <li><a href="masterclass.html">Masterclasses</a></li>
+          <li><a href="consultas.html">Consultas</a></li>
+          <li><a href="diplomatura.html">Formación</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="sobre.html">Sobre el Dr. Marco</a></li>
         </ul>
       </div>
       <div>
-        <h4>Para profesionales</h4>
+        <h2 class="pie-titulo">Para profesionales</h2>
         <ul>
           <li><a href="diplomatura.html">La Diplomatura</a></li>
-          <li><a href="certificacion.html">Certificación en sueroterapia</a></li>
           <li><a href="red.html">La Red</a></li>
           <li><a href="certificado.html">Verificar un certificado</a></li>
+          <li><a href="https://academia.drmarcososa.com" target="_blank" rel="noopener">Academia</a></li>
         </ul>
       </div>
       <div>
-        <h4>Encuéntralo en</h4>
+        <h2 class="pie-titulo">Contacto y redes</h2>
         <ul>
           
           
           
           
           
-          <li><a href="index.html#consulta">Agendar consulta</a></li>
+          
+          
+          <li><a href="consultas.html">Agendar consulta</a></li>
         </ul>
       </div>
     </div>
-    <ul class="pie-legales">
-      <li><a href="terminos.html">Términos de uso</a></li>
-      <li><a href="privacidad.html">Política de privacidad y tratamiento de datos</a></li>
-      <li><a href="promocion.html">Bases de la promoción</a></li>
-      <li><a href="https://academia.drmarcososa.com">Academia</a></li>
-      
+    <ul class="pie-legales" aria-label="Información legal">
+      <li><a href="privacidad.html">Privacidad</a></li>
+      <li><a href="datos.html">Tratamiento de datos</a></li>
+      <li><a href="terminos.html">Términos</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="compras.html">Compras</a></li>
+      <li><a href="devoluciones.html">Devoluciones</a></li>
+      <li><a href="promocion.html">Promociones</a></li>
+      <li><a href="aviso-educativo.html">Aviso educativo</a></li>
     </ul>
     <p class="pie-legal">
       Los contenidos de este sitio son de carácter informativo y educativo. No constituyen
       diagnóstico ni tratamiento, y no reemplazan la consulta médica presencial.
       El Dr. Marco Sosa se desempeña como Director Científico de Lumineight, marca en cuyo
       desarrollo de fórmulas participa y sobre cuyas ventas percibe una participación.
-      Los productos ofrecidos son suplementos dietarios de administración oral con registro
+      Solo se ofrecerán suplementos dietarios de administración oral que cuenten con registro
       sanitario vigente. Los protocolos intravenosos se aplican únicamente en servicios de salud
       habilitados.
     </p>

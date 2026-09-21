@@ -11,7 +11,7 @@ python3 Web/publicar.py --dominio
 Estado actual: publicado en el dominio real, con `noindex` — no debe aparecer en Google.
 
 - Base: https://drmarcososa.com
-- Términos de uso y política de privacidad: versión 1.0, 2026-09-15
+- Términos de uso y política de privacidad: versión 1.0, 2026-09-21
 
 ## Páginas
 
@@ -29,13 +29,24 @@ Estado actual: publicado en el dominio real, con `noindex` — no debe aparecer 
 
 - certificado.html: dato del titular pendiente «correo de contacto»
 - certificados.json: perfil de demostración pendiente de quitar — «Dra. Ejemplo Apellido» no es una persona real
+- compras.html: dato del titular pendiente «correo de contacto»
+- compras.html: dato del titular pendiente «documento de identificación del responsable»
+- consultas.html: enlace pendiente «agenda»
+- consultas.html: enlace pendiente «whatsapp»
 - curso.html: enlace pendiente «inscripcion_curso_3r»
-- diplomatura.html: enlace pendiente «hotmart_curso_suelto»
-- diplomatura.html: enlace pendiente «hotmart_diplomatura»
+- datos.html: dato del titular pendiente «correo de contacto»
+- datos.html: dato del titular pendiente «documento de identificación del responsable»
+- datos.html: dato del titular pendiente «teléfono de contacto»
+- devoluciones.html: dato del titular pendiente «correo de contacto»
+- diplomatura.html: enlace pendiente «pago_diplomatura»
+- diplomatura.html: enlace pendiente «pago_obesidad»
+- diplomatura.html: enlace pendiente «pago_ozonoterapia»
+- diplomatura.html: enlace pendiente «pago_peptidos»
+- diplomatura.html: enlace pendiente «pago_plasma»
+- diplomatura.html: enlace pendiente «pago_sueroterapia»
 - gracias.html: enlace pendiente «guia_pdf»
-- index.html: enlace pendiente «agenda_virtual»
 - index.html: enlace pendiente «agenda»
-- index.html: enlace pendiente «tienda_kit_longevidad»
+- index.html: enlace pendiente «whatsapp»
 - privacidad.html: dato del titular pendiente «correo de contacto»
 - privacidad.html: dato del titular pendiente «documento de identificación del responsable»
 - privacidad.html: dato del titular pendiente «teléfono de contacto»

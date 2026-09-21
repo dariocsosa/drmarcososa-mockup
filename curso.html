@@ -17,6 +17,7 @@
     document.documentElement.classList.add('js');
   }
 </script>
+<script src="medir.js" defer></script>
 
 <!-- ===== generado por Web/publicar.py — no editar acá ===== -->
 <link rel="canonical" href="https://drmarcososa.com/curso.html">
@@ -35,7 +36,7 @@
 <meta name="twitter:image" content="https://drmarcososa.com/assets/retrato-estudio.jpg">
 <link rel="icon" href="assets/sello-redondo.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/sello-redondo.png">
-<meta name="theme-color" content="#243B2B">
+<meta name="theme-color" content="#1F5142">
 <!-- ===== fin del bloque generado ===== -->
 </head>
 <body>
@@ -53,7 +54,7 @@
   </symbol>
 </svg>
 
-<nav class="nav">
+<nav class="nav" aria-label="Principal">
   <div class="envoltura nav-fila">
     <a class="nav-marca" href="index.html">
       <img src="assets/sello-redondo.png" alt="">
@@ -64,13 +65,15 @@
       <span class="solo-lectores">Menú</span>
     </button>
     <ul class="nav-enlaces" id="nav-menu">
-      <li><a href="index.html#problemas" data-nav="problemas">Qué trato</a></li>
-      <li><a href="mapa.html" data-nav="mapa">El Mapa 3R</a></li>
-      <li><a href="diplomatura.html" data-nav="diplomatura">Diplomatura</a></li>
-      <li><a href="red.html" data-nav="red">La Red</a></li>
-      <li><a href="curso.html" data-nav="curso" aria-current="page">Para ti</a></li>
+      <li><a href="index.html" data-nav="inicio">Inicio</a></li>
+      <li><a href="masterclass.html" data-nav="masterclass">Masterclasses</a></li>
+      <li><a href="consultas.html" data-nav="consultas">Consultas</a></li>
+      <li><a href="diplomatura.html" data-nav="formacion">Formación</a></li>
+      <li><a href="recursos.html" data-nav="recursos">Recursos</a></li>
+      <li><a href="sobre.html" data-nav="sobre">Sobre el Dr. Marco</a></li>
+      <li class="nav-cta-movil"><a href="masterclass.html#registro" data-origen="nav-menu-registro">Regístrate gratis</a></li>
     </ul>
-    <a class="boton boton-lleno nav-cta" href="index.html#consulta">Agendar consulta</a>
+    <a class="boton boton-lleno nav-cta" href="masterclass.html#registro" data-origen="nav-cta-registro">Regístrate gratis</a>
   </div>
 </nav>
 
@@ -223,7 +226,7 @@
         <li>Certificado al terminar</li>
         <li>Capítulo 1 del libro, completo</li>
       </ul>
-      <a class="boton boton-verde boton-grande" href="#" data-pendiente="inscripcion_curso_3r" style="width: 100%">Inscribirme</a>
+      <a class="boton boton-verde boton-grande" aria-disabled="true" data-pendiente="inscripcion_curso_3r" title="Disponible pronto" style="width: 100%">Inscribirme</a>
       <p style="font-size: 0.78rem; color: var(--tinta-suave); margin: 1.2rem 0 0">
         Si en los primeros siete días consideras que no era para ti, se te devuelve el dinero.
       </p>
@@ -270,49 +273,54 @@
         </p>
       </div>
       <div>
-        <h4>Para ti</h4>
+        <h2 class="pie-titulo">El sitio</h2>
         <ul>
-          <li><a href="index.html#problemas">Qué trato</a></li>
-          <li><a href="mapa.html">El Mapa 3R</a></li>
-          <li><a href="guia.html">La guía de obesidad</a></li>
-          <li><a href="curso.html">El curso de las 3R</a></li>
-          <li><a href="index.html#consulta">Consulta</a></li>
+          <li><a href="masterclass.html">Masterclasses</a></li>
+          <li><a href="consultas.html">Consultas</a></li>
+          <li><a href="diplomatura.html">Formación</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="sobre.html">Sobre el Dr. Marco</a></li>
         </ul>
       </div>
       <div>
-        <h4>Para profesionales</h4>
+        <h2 class="pie-titulo">Para profesionales</h2>
         <ul>
           <li><a href="diplomatura.html">La Diplomatura</a></li>
-          <li><a href="certificacion.html">Certificación en sueroterapia</a></li>
           <li><a href="red.html">La Red</a></li>
           <li><a href="certificado.html">Verificar un certificado</a></li>
+          <li><a href="https://academia.drmarcososa.com" target="_blank" rel="noopener">Academia</a></li>
         </ul>
       </div>
       <div>
-        <h4>Encuéntralo en</h4>
+        <h2 class="pie-titulo">Contacto y redes</h2>
         <ul>
           
           
           
           
           
-          <li><a href="index.html#consulta">Agendar consulta</a></li>
+          
+          
+          <li><a href="consultas.html">Agendar consulta</a></li>
         </ul>
       </div>
     </div>
-    <ul class="pie-legales">
-      <li><a href="terminos.html">Términos de uso</a></li>
-      <li><a href="privacidad.html">Política de privacidad y tratamiento de datos</a></li>
-      <li><a href="promocion.html">Bases de la promoción</a></li>
-      <li><a href="https://academia.drmarcososa.com">Academia</a></li>
-      
+    <ul class="pie-legales" aria-label="Información legal">
+      <li><a href="privacidad.html">Privacidad</a></li>
+      <li><a href="datos.html">Tratamiento de datos</a></li>
+      <li><a href="terminos.html">Términos</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="compras.html">Compras</a></li>
+      <li><a href="devoluciones.html">Devoluciones</a></li>
+      <li><a href="promocion.html">Promociones</a></li>
+      <li><a href="aviso-educativo.html">Aviso educativo</a></li>
     </ul>
     <p class="pie-legal">
       Los contenidos de este sitio son de carácter informativo y educativo. No constituyen
       diagnóstico ni tratamiento, y no reemplazan la consulta médica presencial.
       El Dr. Marco Sosa se desempeña como Director Científico de Lumineight, marca en cuyo
       desarrollo de fórmulas participa y sobre cuyas ventas percibe una participación.
-      Los productos ofrecidos son suplementos dietarios de administración oral con registro
+      Solo se ofrecerán suplementos dietarios de administración oral que cuenten con registro
       sanitario vigente. Los protocolos intravenosos se aplican únicamente en servicios de salud
       habilitados.
     </p>

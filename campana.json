@@ -1,0 +1,59 @@
+{
+  "sesiones": [
+    {
+      "id": "grasa",
+      "fecha": "2026-10-06T19:00:00-05:00",
+      "duracion_min": 90,
+      "titulo": "Dónde acumulas grasa y te diré qué comer",
+      "enlace_vivo": ""
+    },
+    {
+      "id": "hormonas",
+      "fecha": "2026-10-07T19:00:00-05:00",
+      "duracion_min": 90,
+      "titulo": "Por qué no bajas de peso: el engaño hormonal",
+      "enlace_vivo": ""
+    },
+    {
+      "id": "rebote",
+      "fecha": "2026-10-08T19:00:00-05:00",
+      "duracion_min": 90,
+      "titulo": "El código para acabar con el efecto rebote",
+      "enlace_vivo": ""
+    }
+  ],
+  "zona": "America/Bogota",
+  "formulario": {
+    "proveedor": "",
+    "endpoint": "",
+    "grupo": "",
+    "campos": {
+      "nombre": "fields[name]",
+      "correo": "fields[email]",
+      "whatsapp": "fields[phone]",
+      "pais": "fields[country]",
+      "ciudad": "fields[city]",
+      "perfil": "fields[perfil]",
+      "interes": "fields[interes]",
+      "autorizacion": "fields[autorizacion]",
+      "origen": "fields[origen]",
+      "origen_entrada": "fields[origen_entrada]",
+      "utm_source": "fields[utm_source]",
+      "utm_medium": "fields[utm_medium]",
+      "utm_campaign": "fields[utm_campaign]",
+      "utm_content": "fields[utm_content]",
+      "pagina": "fields[pagina]",
+      "fecha": "fields[fecha_registro]"
+    },
+    "extra": {
+      "ml-submit": "1",
+      "anticsrf": "true"
+    },
+    "confirmacion": "confirmacion.html"
+  },
+  "medicion": {
+    "ga4": "",
+    "meta_pixel": ""
+  },
+  "pagina_registro": "masterclass.html"
+}

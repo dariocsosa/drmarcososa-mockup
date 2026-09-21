@@ -1,35 +1,51 @@
 /* ============================================================
-   Dr. Marco Sosa — Medicina Integrativa
+   Dr. Marco Sosa
    Tokens de marca · fuente única de verdad visual
-   Derivados del sello original (muestreo directo del PNG).
+   Paleta de campaña aprobada el 2026-09-21. Tipografía, sin cambios.
    Ningún color se escribe a mano fuera de este archivo.
    ============================================================ */
 
 :root {
   /* ---------- Color ---------- */
+  /* Paleta aprobada el 2026-09-21 (brief «Cambios web», §2). Reemplaza la
+     derivada del sello. Los siete primeros son los códigos del brief y no se
+     tocan; lo que sigue son derivados, cada uno con su razón. */
 
-  /* Verdes — del disco del sello y de la M del monograma */
-  --verde-consultorio: #243B2B;   /* el más profundo. Fondos de sección, pie */
-  --verde-sello:       #2F4E37;   /* el verde del sello. Campo principal oscuro */
-  --verde-salvia:      #7E8A62;   /* la M del monograma. Secundario, bordes vivos */
-  --verde-tenue:       #C7CDB8;   /* salvia rebajado. Texto secundario sobre oscuro */
+  --verde-bosque:      #1F5142;   /* navegación, títulos de interfaz, fondos oscuros, hover */
+  --terracota:         #C96343;   /* botones principales, palabras destacadas, conversión */
+  --mostaza:           #E4AA18;   /* etiquetas, iconos, datos clave, botón secundario. NUNCA texto sobre crema */
+  --crema-calido:      #F7F1E5;   /* fondo principal, separación de secciones */
+  --crema-claro:       #FFF9EE;   /* texto sobre oscuro, fondos muy suaves */
+  --verde-suave:       #E4EDE7;   /* tarjetas secundarias, formularios, fondos informativos */
+  --terracota-claro:   #F2D8CE;   /* fondos destacados, bloques complementarios */
 
-  /* Dorados — de la S del monograma */
-  --dorado:            #B09878;   /* acento. Filetes, subrayados, la rueda */
-  --dorado-claro:      #D4C0A0;   /* hover y estados activos sobre oscuro */
+  /* Derivados */
+  --terracota-profundo:#B5553A;   /* la terracota cuando lleva texto chico: con crema claro da 4,6:1
+                                     y pasa AA. La #C96343 da 3,7:1 y solo sirve en texto grande */
+  --verde-hondo:       #173F33;   /* pie y bandas oscuras que necesitan separarse del bosque */
+  --tinta:             #1B2A24;   /* texto de lectura. Sobre mostaza, en vez de negro puro */
+  --tinta-suave:       #4B5B53;   /* texto secundario sobre claro */
+  --linea:             #E2D8C5;   /* filetes sobre crema */
+  --alerta:            #9A3F2A;   /* estados de error y certificados revocados */
 
-  /* Neutros */
-  --crema:             #EDE3CC;   /* tipografía del sello. Texto sobre verde */
-  --hueso:             #F4F5F0;   /* campo claro, con matiz salvia. NO es crema cálido */
-  --hueso-hundido:     #E9EBE3;   /* tarjetas y bloques sobre hueso */
-  --tinta:             #1A2119;   /* texto de lectura */
-  --tinta-suave:       #4A5449;   /* texto secundario sobre claro */
-  --linea:             #D5D9CD;   /* filetes sobre claro */
+  /* Nombres heredados. El CSS del sitio los usa en 300 lugares; se
+     repuntan a la paleta nueva en vez de reescribirlos uno por uno. */
+  --verde-consultorio: var(--verde-bosque);
+  --verde-sello:       var(--verde-hondo);
+  --verde-salvia:      #7C978A;   /* bosque aclarado: hojas de fondo y bordes vivos */
+  --verde-tenue:       #CFDCD4;   /* texto secundario sobre bosque: 6,4:1 */
+  --crema:             var(--crema-claro);
+  --hueso:             var(--crema-calido);
+  --hueso-hundido:     var(--verde-suave);
+  /* «dorado» es el acento según el fondo: mostaza sobre oscuro, terracota
+     sobre claro (estilos.css lo cambia en .seccion-clara). */
+  --dorado:            var(--mostaza);
+  --dorado-claro:      var(--mostaza);
 
   /* Semánticos */
-  --fondo:             var(--hueso);
+  --fondo:             var(--crema-calido);
   --texto:             var(--tinta);
-  --acento:            var(--dorado);
+  --acento:            var(--terracota);
 
   /* ---------- Tipografía ---------- */
   --display: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -67,6 +83,8 @@
   --radio-nulo: 0;
   --radio-suave: 4px;
   --radio-disco: 999px;
+  --radio-boton: 10px;  /* «moderadamente redondeado», brief §2 */
+  --sombra-boton: 0 6px 18px -8px color-mix(in srgb, var(--verde-bosque) 55%, transparent);
 
   --filete: 1px solid var(--linea);
   --filete-dorado: 1px solid var(--dorado);
