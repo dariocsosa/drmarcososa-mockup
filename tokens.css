@@ -1,53 +1,46 @@
 /* ============================================================
-   Dr. Marco Sosa
+   Dr. Marco Sosa — Medicina Integrativa
    Tokens de marca · fuente única de verdad visual
-   Paleta de campaña aprobada el 2026-09-21. Tipografía, sin cambios.
-   Ningún color se escribe a mano fuera de este archivo.
+   Paleta del 2026-09-22 (actualización del brief web de Diana):
+   verde dominante, crema de fondo, mostaza solo como acento.
+   El acento cálido del brief del 21-sep salió del sistema. Ningún color se escribe a mano
+   fuera de este archivo.
    ============================================================ */
 
 :root {
   /* ---------- Color ---------- */
-  /* Paleta aprobada el 2026-09-21 (brief «Cambios web», §2). Reemplaza la
-     derivada del sello. Los siete primeros son los códigos del brief y no se
-     tocan; lo que sigue son derivados, cada uno con su razón. */
 
-  --verde-bosque:      #1F5142;   /* navegación, títulos de interfaz, fondos oscuros, hover */
-  --terracota:         #C96343;   /* botones principales, palabras destacadas, conversión */
-  --mostaza:           #E4AA18;   /* etiquetas, iconos, datos clave, botón secundario. NUNCA texto sobre crema */
-  --crema-calido:      #F7F1E5;   /* fondo principal, separación de secciones */
-  --crema-claro:       #FFF9EE;   /* texto sobre oscuro, fondos muy suaves */
-  --verde-suave:       #E4EDE7;   /* tarjetas secundarias, formularios, fondos informativos */
-  --terracota-claro:   #F2D8CE;   /* fondos destacados, bloques complementarios */
+  /* Verdes — el color de mayor presencia y autoridad */
+  --verde-profundo:  #173F33;   /* fondos institucionales, navegación, títulos, hover */
+  --verde-bosque:    #1F5142;   /* botones principales, enlaces, iconos, marca */
+  --verde-eucalipto: #607E70;   /* elementos secundarios, datos, gráficos */
+  --verde-salvia:    #9BAFA4;   /* fondos suaves, divisiones; texto secundario sobre verde */
+  --verde-claro:     #E4EDE7;   /* tarjetas, formularios, bloques informativos */
 
-  /* Derivados */
-  --terracota-profundo:#B5553A;   /* la terracota cuando lleva texto chico: con crema claro da 4,6:1
-                                     y pasa AA. La #C96343 da 3,7:1 y solo sirve en texto grande */
-  --verde-hondo:       #173F33;   /* pie y bandas oscuras que necesitan separarse del bosque */
-  --tinta:             #1B2A24;   /* texto de lectura. Sobre mostaza, en vez de negro puro */
-  --tinta-suave:       #4B5B53;   /* texto secundario sobre claro */
-  --linea:             #E2D8C5;   /* filetes sobre crema */
-  --alerta:            #9A3F2A;   /* estados de error y certificados revocados */
+  /* Cremas */
+  --crema-calido:    #F7F1E5;   /* fondo principal */
+  --crema-claro:     #FFF9EE;   /* tarjetas y texto sobre verde */
 
-  /* Nombres heredados. El CSS del sitio los usa en 300 lugares; se
-     repuntan a la paleta nueva en vez de reescribirlos uno por uno. */
-  --verde-consultorio: var(--verde-bosque);
-  --verde-sello:       var(--verde-hondo);
-  --verde-salvia:      #7C978A;   /* bosque aclarado: hojas de fondo y bordes vivos */
-  --verde-tenue:       #CFDCD4;   /* texto secundario sobre bosque: 6,4:1 */
-  --crema:             var(--crema-claro);
-  --hueso:             var(--crema-calido);
-  --hueso-hundido:     var(--verde-suave);
-  /* «dorado» es el acento según el fondo: mostaza sobre oscuro, terracota
-     sobre claro (estilos.css lo cambia en .seccion-clara). */
-  --dorado:            var(--mostaza);
-  --dorado-claro:      var(--mostaza);
+  /* Acento — una palabra o una etiqueta por bloque. Nunca como texto sobre crema,
+     nunca en superficies grandes. Sobre mostaza, el texto va en verde profundo. */
+  --mostaza:         #E4AA18;
+
+  /* Lectura */
+  --tinta:           #15261F;   /* texto de lectura sobre claro */
+  --tinta-suave:     #43554C;   /* texto secundario sobre claro */
+  --linea:           color-mix(in srgb, var(--verde-salvia) 55%, var(--crema-calido));
+
+  /* Estado — solo para certificados revocados */
+  --alerta:          #8C4A41;
 
   /* Semánticos */
-  --fondo:             var(--crema-calido);
-  --texto:             var(--tinta);
-  --acento:            var(--terracota);
+  --fondo:           var(--crema-calido);
+  --texto:           var(--tinta);
+  --acento:          var(--mostaza);
 
   /* ---------- Tipografía ---------- */
+  /* Fraunces en H1 y H2; Archivo en H3, párrafos, navegación, botones, formularios,
+     precios y etiquetas. No entra una tercera familia. */
   --display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --texto-fuente: "Archivo", "Segoe UI", system-ui, sans-serif;
 
@@ -60,9 +53,10 @@
   --t-titulo: clamp(2.25rem, 1.7rem + 2.4vw, 4rem);
   --t-hero: clamp(2.75rem, 1.9rem + 3.8vw, 5.5rem);
 
-  /* Ejes variables de Fraunces — el carácter de la marca */
-  --wonk-display: 1;    /* activa las formas irregulares en titulares */
-  --soft-display: 40;   /* suaviza las terminaciones. Cálido, no severo */
+  /* Ejes variables de Fraunces. Menos irregularidad que antes: la identidad
+     se volvió más científica y las formas decorativas restan claridad. */
+  --wonk-display: 0;
+  --soft-display: 30;
 
   /* ---------- Espacio ---------- */
   --e-1: 0.5rem;
@@ -75,19 +69,20 @@
 
   --ancho-lectura: 68ch;
   --ancho-max: 1200px;
-  --margen: clamp(1.25rem, 5vw, 4rem);
+  --margen: clamp(1rem, 5vw, 4rem);
 
   /* ---------- Forma ---------- */
-  /* El sello es un círculo. Los radios de la marca son generosos o nulos:
-     nada de 8px genéricos. */
+  /* Retículas, líneas y módulos rectangulares. Sin círculos decorativos:
+     el único círculo es el sello, y solo en certificados, pie, «Sobre el
+     Dr. Marco» y marcas de agua. Fotos en 4:5 con radio máximo de 8px. */
   --radio-nulo: 0;
   --radio-suave: 4px;
-  --radio-disco: 999px;
-  --radio-boton: 10px;  /* «moderadamente redondeado», brief §2 */
-  --sombra-boton: 0 6px 18px -8px color-mix(in srgb, var(--verde-bosque) 55%, transparent);
+  --radio-boton: 6px;
+  --radio-foto: 8px;
 
   --filete: 1px solid var(--linea);
-  --filete-dorado: 1px solid var(--dorado);
+  --filete-acento: 2px solid var(--mostaza);
+  --sombra-suave: 0 10px 24px -14px color-mix(in srgb, var(--verde-profundo) 70%, transparent);
 
   /* ---------- Movimiento ---------- */
   --paso: 220ms cubic-bezier(0.22, 0.61, 0.36, 1);

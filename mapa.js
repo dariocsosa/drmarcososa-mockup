@@ -76,7 +76,7 @@
   function dibujarRueda() {
     svg.appendChild(el('circle', {
       cx: CX, cy: CY, r: 203, fill: 'none',
-      stroke: 'var(--dorado)', 'stroke-width': 0.7, opacity: 0.4
+      stroke: 'var(--mostaza)', 'stroke-width': 0.7, opacity: 0.4
     }));
 
     // guías: el contorno completo de cada anillo, tenue
@@ -85,7 +85,7 @@
       ANILLOS.forEach(an => {
         svg.appendChild(el('path', {
           d: sectorAnular(an.r0, an.r1, a0, a1),
-          fill: 'none', stroke: 'var(--verde-salvia)',
+          fill: 'none', stroke: 'var(--verde-eucalipto)',
           'stroke-width': 0.6, 'stroke-dasharray': '2 3', opacity: 0.45
         }));
       });
@@ -98,8 +98,8 @@
       ANILLOS.forEach(an => {
         const p = el('path', {
           d: sectorAnular(an.r0, an.r0, a0, a1),
-          fill: 'var(--verde-salvia)', 'fill-opacity': an.opacidad,
-          stroke: 'var(--hueso)', 'stroke-width': 1.2
+          fill: 'var(--verde-eucalipto)', 'fill-opacity': an.opacidad,
+          stroke: 'var(--crema-calido)', 'stroke-width': 1.2
         });
         if (!sinMovimiento) p.style.transition = 'd 520ms cubic-bezier(0.16,1,0.3,1)';
         capas[rol.id][an.clave] = p;
@@ -107,7 +107,7 @@
       });
       svg.appendChild(el('path', {
         d: sectorAnular(196, 198.8, a0, a1),
-        fill: 'var(--dorado)', opacity: 0.28,
+        fill: 'var(--mostaza)', opacity: 0.28,
         class: 'filete-' + rol.id
       }));
     });
@@ -118,8 +118,8 @@
       svg.appendChild(t);
     });
 
-    svg.appendChild(el('circle', { cx: CX, cy: CY, r: 62, fill: 'var(--hueso)' }));
-    svg.appendChild(el('circle', { cx: CX, cy: CY, r: 62, fill: 'none', stroke: 'var(--dorado)', 'stroke-width': 0.9 }));
+    svg.appendChild(el('circle', { cx: CX, cy: CY, r: 62, fill: 'var(--crema-calido)' }));
+    svg.appendChild(el('circle', { cx: CX, cy: CY, r: 62, fill: 'none', stroke: 'var(--mostaza)', 'stroke-width': 0.9 }));
 
     const centro = el('text', { x: CX, y: CY + 3, class: 'rueda-centro-rol', id: 'mapa-centro' });
     centro.textContent = 'Mapa 3R';

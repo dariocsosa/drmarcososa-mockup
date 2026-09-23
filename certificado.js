@@ -34,8 +34,10 @@
     const modulos = (c.modulos || []).map(m => `<li>${m}</li>`).join('');
     const vigente = c.estado === 'vigente';
     const url = `${location.origin}${location.pathname}?codigo=${encodeURIComponent(c.codigo)}`;
+    // La insignia se pega en sitios ajenos, donde tokens.css no existe: por eso
+    // lleva los colores escritos. Son verde bosque y verde profundo de la paleta.
     const insignia =
-`<a href="${url}" style="display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1rem;border:1px solid #B09878;border-radius:4px;text-decoration:none;font-family:system-ui,sans-serif;color:#243B2B">
+`<a href="${url}" style="display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1rem;border:1px solid #1F5142;border-radius:4px;text-decoration:none;font-family:system-ui,sans-serif;color:#173F33">
   <img src="https://drmarcososa.com/assets/sello-redondo.png" width="34" height="34" alt="">
   <span><strong>Certificado por el Dr. Marco Sosa</strong><br><small>Verificar · ${c.codigo}</small></span>
 </a>`;

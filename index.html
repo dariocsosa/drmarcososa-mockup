@@ -17,7 +17,6 @@
     document.documentElement.classList.add('js');
   }
 </script>
-<script src="medir.js" defer></script>
 
 <!-- ===== generado por Web/publicar.py — no editar acá ===== -->
 <link rel="canonical" href="https://drmarcososa.com/">
@@ -29,14 +28,14 @@
 <meta property="og:title" content="Masterclass sobre obesidad y metabolismo | Dr. Marco Sosa">
 <meta property="og:description" content="Participa gratis en tres masterclasses del Dr. Marco Sosa sobre obesidad, metabolismo, factores hormonales y efecto rebote. En vivo el 6, 7 y 8 de octubre.">
 <meta property="og:url" content="https://drmarcososa.com/">
-<meta property="og:image" content="https://drmarcososa.com/assets/retrato-estudio.jpg">
+<meta property="og:image" content="https://drmarcososa.com/assets/dr-marco-sosa-1000.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Masterclass sobre obesidad y metabolismo | Dr. Marco Sosa">
 <meta name="twitter:description" content="Participa gratis en tres masterclasses del Dr. Marco Sosa sobre obesidad, metabolismo, factores hormonales y efecto rebote. En vivo el 6, 7 y 8 de octubre.">
-<meta name="twitter:image" content="https://drmarcososa.com/assets/retrato-estudio.jpg">
+<meta name="twitter:image" content="https://drmarcososa.com/assets/dr-marco-sosa-1000.jpg">
 <link rel="icon" href="assets/sello-redondo.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/sello-redondo.png">
-<meta name="theme-color" content="#1F5142">
+<meta name="theme-color" content="#173F33">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,7 +44,7 @@
   "alternateName": "Dr. Marco Sosa",
   "medicalSpecialty": "PrimaryCare",
   "url": "https://drmarcososa.com/",
-  "image": "https://drmarcososa.com/assets/retrato-estudio.jpg",
+  "image": "https://drmarcososa.com/assets/dr-marco-sosa-1000.jpg",
   "identifier": {
     "@type": "PropertyValue",
     "name": "Registro médico (Colombia)",
@@ -56,361 +55,439 @@
     "La Ceja",
     "Medellín"
   ],
-  "location": []
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Consultorio La Ceja",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 19 #13b-251, Bella Nova Spa, piso 3",
+        "addressLocality": "La Ceja",
+        "addressRegion": "Antioquia",
+        "addressCountry": "CO"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Consultorio Medellín",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrera 78B #49a-32, Laureles-Estadio",
+        "addressLocality": "Medellín",
+        "addressRegion": "Antioquia",
+        "addressCountry": "CO"
+      }
+    }
+  ]
 }
 </script>
 <!-- ===== fin del bloque generado ===== -->
 </head>
 <body>
 
-<!-- hoja botánica reutilizable, derivada del logo -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="hoja" viewBox="0 0 200 320">
-    <path d="M100 8C58 70 34 140 34 196c0 62 30 108 66 116 36-8 66-54 66-116 0-56-24-126-66-188Z"
-          fill="none" stroke="currentColor" stroke-width="2"/>
-    <path d="M100 24v288" fill="none" stroke="currentColor" stroke-width="2"/>
-    <path d="M100 96c-16 10-30 22-40 36M100 96c16 10 30 22 40 36
-             M100 152c-18 10-34 24-45 40M100 152c18 10 34 24 45 40
-             M100 208c-16 9-30 21-39 34M100 208c16 9 30 21 39 34"
-          fill="none" stroke="currentColor" stroke-width="1.5"/>
-  </symbol>
-</svg>
-
-<!-- ============ navegación ============ -->
+<aside class="franja" aria-label="Masterclass gratuita en vivo online">
+  <div class="envoltura franja-fila">
+    <p class="franja-mensaje">
+      <span class="franja-titulo">Masterclass gratuita <b>en vivo online</b></span>
+      <span class="franja-fechas">6, 7 y 8 de octubre · 7:00 p. m. hora Colombia</span>
+    </p>
+    <a class="boton boton-lleno" href="#registro" data-origen="franja">Registrarme a la masterclass</a>
+  </div>
+</aside>
 <nav class="nav" aria-label="Principal">
   <div class="envoltura nav-fila">
     <a class="nav-marca" href="index.html">
-      <img src="assets/sello-redondo.png" alt="">
-      <span>Dr. Marco Sosa</span>
+      <span class="nav-marca-nombre">Dr. Marco Sosa</span>
+      <span class="nav-marca-oficio">Medicina integrativa</span>
     </a>
     <button class="nav-boton" type="button" aria-expanded="false" aria-controls="nav-menu">
       <span class="nav-barras" aria-hidden="true"></span>
       <span class="solo-lectores">Menú</span>
     </button>
     <ul class="nav-enlaces" id="nav-menu">
-      <li><a href="index.html" data-nav="inicio" aria-current="page">Inicio</a></li>
-      <li><a href="masterclass.html" data-nav="masterclass">Masterclasses</a></li>
+      <li><a href="masterclass.html" data-nav="masterclasses">Masterclasses</a></li>
       <li><a href="consultas.html" data-nav="consultas">Consultas</a></li>
       <li><a href="diplomatura.html" data-nav="formacion">Formación</a></li>
       <li><a href="recursos.html" data-nav="recursos">Recursos</a></li>
       <li><a href="sobre.html" data-nav="sobre">Sobre el Dr. Marco</a></li>
-      <li class="nav-cta-movil"><a href="masterclass.html#registro" data-origen="nav-menu-registro">Regístrate gratis</a></li>
     </ul>
-    <a class="boton boton-lleno nav-cta" href="masterclass.html#registro" data-origen="nav-cta-registro">Regístrate gratis</a>
   </div>
 </nav>
 
-<main id="contenido">
+<main>
 
-<!-- ============ 1. portada de campaña ============ -->
-<header class="seccion seccion-clara home-portada">
-  <span class="geo geo-circulo geo-terracota home-geo-portada-1" aria-hidden="true"></span>
-  <span class="geo geo-mostaza home-geo-portada-2" aria-hidden="true"></span>
-  <div class="envoltura home-portada-reja">
-    <div class="home-portada-texto">
-      <p class="etiqueta etiqueta-vivo">MASTERCLASS GRATUITAS EN VIVO · 6, 7 Y 8 DE OCTUBRE · 7:00 P. M. HORA COLOMBIA</p>
-      <h1 class="t-hero home-h1">Por qué no bajas de peso: metabolismo, hormonas y <span class="resalta">efecto rebote</span></h1>
-      <p class="entrada home-entrada">
+<!-- ============ 1 · portada de campaña ============ -->
+<header class="portada reticula grano">
+  <div class="envoltura portada-reja">
+    <div>
+      <p class="portada-anuncio">Masterclass gratuita <b>en vivo online</b></p>
+      <p class="etiqueta">Masterclass gratuitas en vivo · 6, 7 y 8 de octubre · 7:00 p. m. hora Colombia</p>
+      <h1>Por qué no bajas de peso: metabolismo, hormonas y <em class="acento">efecto rebote</em></h1>
+      <p class="entrada">
         Comprende los factores que pueden dificultar la pérdida de peso y revisa información
         reciente sobre obesidad y metabolismo en tres sesiones gratuitas con el Dr. Marco Sosa.
       </p>
-      <p class="home-urgencia">Mantente al día para tomar mejores decisiones.</p>
-      <div class="acciones">
-        <a class="boton boton-lleno boton-grande" href="masterclass.html#registro" data-origen="home-portada-registro">QUIERO REGISTRARME GRATIS</a>
-      </div>
-      <ul class="home-apoyo">
+      <p class="portada-urgencia">Mantente al día para tomar mejores decisiones.</p>
+      <a class="boton boton-lleno boton-grande" href="#registro" data-origen="portada">Quiero registrarme gratis</a>
+      <ul class="portada-apoyo">
         <li>Tres sesiones en vivo a las 7:00 p. m. hora Colombia</li>
         <li>Preguntas en directo</li>
         <li>Registro previo</li>
       </ul>
     </div>
-    <figure class="home-portada-foto">
-      <span class="geo geo-circulo geo-verde home-geo-foto" aria-hidden="true"></span>
-      <img src="assets/retrato-estudio.jpg" alt="El Dr. Marco Sosa, médico con más de 30 años de práctica clínica" width="900" height="1200">
+    <figure class="foto">
+      <picture>
+        <source type="image/webp" srcset="assets/dr-marco-sosa-480.webp 480w, assets/dr-marco-sosa-800.webp 800w, assets/dr-marco-sosa-1000.webp 1000w" sizes="(max-width: 900px) 90vw, 440px">
+        <img src="assets/dr-marco-sosa-800.jpg" srcset="assets/dr-marco-sosa-480.jpg 480w, assets/dr-marco-sosa-800.jpg 800w, assets/dr-marco-sosa-1000.jpg 1000w" sizes="(max-width: 900px) 90vw, 440px" width="800" height="1000" alt="Dr. Marco Sosa, médico integrativo" fetchpriority="high">
+      </picture>
+      <figcaption><span>Dr. Marco Sosa</span><span>Registro médico 050330</span></figcaption>
     </figure>
   </div>
 </header>
 
-<!-- ============ 2. tres masterclasses ============ -->
-<section class="seccion seccion-clara home-mcs" id="masterclasses" aria-labelledby="t-mcs">
+<!-- ============ 2 · las tres masterclasses ============ -->
+<section class="seccion seccion-clara" id="masterclasses">
   <div class="envoltura revelar">
-    <p class="rotulo">Tres sesiones en vivo</p>
-    <h2 class="t-titulo" id="t-mcs">¿Cuál de estas preguntas necesitas <span class="resalta">resolver</span>?</h2>
-
-    <div class="home-mc-reja">
-      <a class="tarjeta home-mc" href="masterclass.html#grasa" data-origen="home-tarjeta-grasa">
-        <span class="etiqueta">6 oct · 7:00 p. m.</span>
+    <div class="seccion-cabeza">
+      <p class="rotulo">Tres sesiones en vivo</p>
+      <h2 class="t-titulo">¿Cuál de estas preguntas necesitas <em class="acento">resolver</em>?</h2>
+    </div>
+    <div class="tarjetas-mc">
+      <a class="tarjeta-mc" href="masterclass.html?origen=tarjeta-6-oct#mc-6" data-origen="tarjeta-6-oct">
+        <p class="tarjeta-mc-fecha"><span class="tarjeta-mc-dia">6 oct</span><span class="tarjeta-mc-hora">7:00 p. m.</span></p>
         <h3>Dónde acumulas grasa y te diré qué comer</h3>
         <p>Descubre, a partir de datos recientes, qué puede revelar la forma en que tu cuerpo distribuye la grasa.</p>
-        <span class="boton boton-lleno home-mc-boton">QUIERO APRENDER QUÉ COMER</span>
+        <span class="boton boton-lleno">Quiero aprender qué comer</span>
       </a>
-      <a class="tarjeta home-mc" href="masterclass.html#hormonas" data-origen="home-tarjeta-hormonas">
-        <span class="etiqueta">7 oct · 7:00 p. m.</span>
+      <a class="tarjeta-mc" href="masterclass.html?origen=tarjeta-7-oct#mc-7" data-origen="tarjeta-7-oct">
+        <p class="tarjeta-mc-fecha"><span class="tarjeta-mc-dia">7 oct</span><span class="tarjeta-mc-hora">7:00 p. m.</span></p>
         <h3>Por qué no bajas de peso: el engaño hormonal</h3>
         <p>Identifica, con información actualizada, qué factores hormonales podrían estar influyendo en tus resultados.</p>
-        <span class="boton boton-lleno home-mc-boton">QUIERO ENTENDER QUÉ PASA</span>
+        <span class="boton boton-lleno">Quiero entender qué pasa</span>
       </a>
-      <a class="tarjeta home-mc" href="masterclass.html#rebote" data-origen="home-tarjeta-rebote">
-        <span class="etiqueta">8 oct · 7:00 p. m.</span>
+      <a class="tarjeta-mc" href="masterclass.html?origen=tarjeta-8-oct#mc-8" data-origen="tarjeta-8-oct">
+        <p class="tarjeta-mc-fecha"><span class="tarjeta-mc-dia">8 oct</span><span class="tarjeta-mc-hora">7:00 p. m.</span></p>
         <h3>El código para acabar con el efecto rebote</h3>
         <p>Comprende, con base en evidencia reciente, por qué recuperas el peso y qué factores debes considerar para evitar repetir el ciclo.</p>
-        <span class="boton boton-lleno home-mc-boton">QUIERO ENTENDER EL EFECTO REBOTE</span>
+        <span class="boton boton-lleno">Quiero entender el efecto rebote</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============ 3. formulario ============
-     El formulario real es de registro.js (agente de campaña): busca
-     [data-formulario-registro] y lo llena. Sin JS queda el enlace a la página
-     de registro. Confirmación esperada (brief §4): "Tu registro está listo.
-     Revisa tu correo para confirmar tu acceso a las tres masterclasses." -->
-<section class="seccion seccion-suave home-registro" id="registro" aria-labelledby="t-registro">
-  <div class="envoltura estrecha revelar">
-    <p class="etiqueta">REGISTRO GRATUITO</p>
-    <h2 class="t-grande" id="t-registro">Reserva tu lugar en las tres masterclasses</h2>
-    <div data-formulario-registro data-origen="home">
-      <p class="suave">
-        El registro toma un minuto: nombre, correo, WhatsApp y la masterclass que más te interesa.
+<!-- ============ 3 · formulario ============ -->
+<section class="seccion seccion-verde" id="registro">
+  <div class="envoltura registro-reja revelar">
+    <div>
+      <p class="etiqueta">Registro gratuito</p>
+      <h2 class="t-titulo" style="margin-top: 1.2rem">Regístrate una vez y conéctate a las <em class="acento">tres</em> sesiones</h2>
+      <p class="entrada-clara suave">
+        Con un solo registro quedas inscrito en las tres masterclasses en vivo y recibes los
+        enlaces para conectarte a cada transmisión.
       </p>
-      <div class="acciones">
-        <a class="boton boton-lleno boton-grande" href="masterclass.html#registro" data-origen="home-formulario">QUIERO REGISTRARME GRATIS</a>
+      <ul class="lista-simple" style="margin-top: 1.4rem">
+        <li>6, 7 y 8 de octubre, 7:00 p. m. hora Colombia</li>
+        <li>En vivo y online, desde cualquier país</li>
+        <li>Con espacio para enviar tus preguntas al Dr. Marco</li>
+      </ul>
+    </div>
+    <!-- Dos modos, los decide registro.js con lo que dejó publicar.py:
+     con destino de formulario, se envía el registro completo;
+     sin destino pero con número de WhatsApp, el mismo formulario arma el
+     mensaje y abre WhatsApp. En ese modo no se guarda nada en el sitio. -->
+<form class="formulario" id="registro-masterclass" method="post" action=""
+      data-whatsapp="573192894536">
+  <p class="formulario-intro campo-ancho" data-modo="whatsapp" hidden>
+    Escríbenos por WhatsApp y te enviamos los enlaces de cada transmisión.
+  </p>
+  <div class="campo campo-ancho">
+    <label for="r-nombre">Nombre completo</label>
+    <input type="text" id="r-nombre" name="nombre" autocomplete="name" required>
+  </div>
+  <div class="campo" data-modo="formulario">
+    <label for="r-correo">Correo electrónico</label>
+    <input type="email" id="r-correo" name="correo" autocomplete="email" required>
+  </div>
+  <div class="campo" data-modo="formulario">
+    <label for="r-whatsapp">WhatsApp con código de país</label>
+    <input type="tel" id="r-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel"
+           placeholder="+57 300 000 0000" pattern="\+[0-9][0-9 \-]{6,18}" required
+           aria-describedby="r-whatsapp-ayuda">
+    <span class="ayuda" id="r-whatsapp-ayuda">Empieza con + y el código: +57 Colombia, +1 República Dominicana.</span>
+  </div>
+  <div class="campo">
+    <label for="r-pais">País</label>
+    <input type="text" id="r-pais" name="pais" autocomplete="country-name" required>
+  </div>
+  <div class="campo">
+    <label for="r-ciudad">Ciudad</label>
+    <input type="text" id="r-ciudad" name="ciudad" autocomplete="address-level2" required>
+  </div>
+  <div class="campo">
+    <label for="r-perfil">Perfil</label>
+    <select id="r-perfil" name="perfil" required>
+      <option value="">Elige una opción</option>
+      <option value="salud-personal">Salud personal</option>
+      <option value="profesional-salud">Profesional de la salud</option>
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+  <div class="campo">
+    <label for="r-interes">Masterclass de mayor interés</label>
+    <select id="r-interes" name="interes" required>
+      <option value="">Elige una opción</option>
+      <option value="distribucion-grasa">Distribución de grasa</option>
+      <option value="hormonas">Hormonas</option>
+      <option value="efecto-rebote">Efecto rebote</option>
+      <option value="las-tres">Las tres</option>
+    </select>
+  </div>
+  <input type="hidden" name="origen" value="">
+  <input type="hidden" name="pagina" value="">
+  <input type="hidden" name="utm_source" value="">
+  <input type="hidden" name="utm_medium" value="">
+  <input type="hidden" name="utm_campaign" value="">
+  <div class="consentimiento" data-modo="formulario">
+    <input type="checkbox" id="r-autorizacion" name="autorizacion" value="si" required>
+    <label for="r-autorizacion">Autorizo el tratamiento de mis datos personales para gestionar mi
+      registro a las masterclasses —confirmación, enlaces para conectarme y recordatorios—, en los
+      términos de la <a href="privacidad.html">política de privacidad</a>. Puedo revocarlo cuando quiera.</label>
+  </div>
+  <button class="boton boton-lleno boton-grande" type="submit">Quiero registrarme gratis</button>
+  <p class="ayuda campo-ancho" data-modo="whatsapp" hidden>
+    Estos datos no se guardan en este sitio: solo viajan en el mensaje de WhatsApp que tú envías.
+    Ver la <a href="privacidad.html">política de privacidad</a>.
+  </p>
+  <p class="formulario-estado" role="status" aria-live="polite"></p>
+</form>
+  </div>
+</section>
+
+<!-- ============ 4 · autoridad y confianza ============ -->
+<section class="seccion seccion-clara">
+  <div class="envoltura revelar">
+    <div class="seccion-cabeza">
+      <p class="rotulo">Quién te acompaña</p>
+      <h2 class="t-titulo">Actualiza lo que has aprendido con experiencia clínica y evidencia reciente</h2>
+    </div>
+    <div class="autoridad-reja">
+      <ul class="datos-autoridad">
+        <li><b>30</b><span>años de experiencia clínica</span></li>
+        <li><b>+6</b><span>libros escritos</span></li>
+        <li><span><strong>Formación</strong> en Medicina, Salud Pública y Medicina Integrativa</span></li>
+        <li><span><strong>Experiencia docente</strong> en diferentes instituciones y espacios académicos</span></li>
+      </ul>
+      <div>
+        <blockquote class="cita-destacada">
+          Obtendrás información actual, explicada con claridad y conectada con situaciones reales de consulta.
+        </blockquote>
+        <p style="margin-top: 1.6rem"><a class="boton boton-linea" href="sobre.html">Conocer al Dr. Marco</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 4. autoridad y confianza ============ -->
-<section class="seccion grano home-autoridad" aria-labelledby="t-autoridad">
-  <span class="geo geo-circulo geo-terracota home-geo-autoridad" aria-hidden="true"></span>
+<!-- ============ 5 · pacientes y profesionales ============ -->
+<section class="seccion seccion-verde">
   <div class="envoltura revelar">
-    <p class="rotulo">Quién dicta las masterclasses</p>
-    <h2 class="t-titulo" id="t-autoridad">Actualiza lo que has aprendido con experiencia clínica y <span class="resalta">evidencia reciente</span></h2>
-    <ul class="home-autoridad-lista">
-      <li><b>30 años</b><span>de experiencia clínica.</span></li>
-      <li><b>Más de 6</b><span>libros escritos.</span></li>
-      <li><b>Formación</b><span>en Medicina, Salud Pública y Medicina Integrativa.</span></li>
-      <li><b>Docencia</b><span>Experiencia docente en diferentes instituciones y espacios académicos.</span></li>
-    </ul>
-    <blockquote class="home-frase">
-      <p>Obtendrás información actual, explicada con claridad y conectada con situaciones reales de consulta.</p>
-    </blockquote>
-    <div class="acciones">
-      <a class="boton boton-terciario home-boton-claro" href="sobre.html" data-origen="home-autoridad-sobre">Conoce la trayectoria del Dr. Marco</a>
+    <div class="seccion-cabeza">
+      <p class="rotulo">Dos recorridos</p>
+      <h2 class="t-titulo">¿Vienes por tu salud o por tu práctica?</h2>
     </div>
-  </div>
-</section>
-
-<!-- ============ 5. dos recorridos (y el enfoque integral) ============ -->
-<section class="seccion seccion-clara home-recorridos" aria-labelledby="t-recorridos">
-  <div class="envoltura revelar">
-    <p class="rotulo">El enfoque integral</p>
-    <h2 class="t-titulo" id="t-recorridos">No eres una parte. <span class="resalta">Eres la totalidad.</span></h2>
-
-    <div class="home-recorridos-reja">
-      <article class="tarjeta home-recorrido">
-        <p class="rotulo">Pacientes</p>
+    <div class="modulos">
+      <article class="modulo-caja">
+        <p class="modulo-caja-etq">Pacientes</p>
         <h3>Quiero comprender mejor mi salud</h3>
         <p>Información clara, recursos y opciones antes de decidir.</p>
         <div class="acciones">
-          <a class="boton boton-secundario" href="recursos.html" data-origen="home-recorridos-recursos">Ver recursos para mí</a>
-          <a class="boton boton-terciario" href="consultas.html" data-origen="home-recorridos-consulta">Agendar una consulta</a>
+          <a class="boton boton-lleno" href="recursos.html">Ver recursos para mí</a>
+          <a class="boton boton-linea" href="#consultas">Agendar una consulta</a>
         </div>
       </article>
-      <article class="tarjeta tarjeta-suave home-recorrido">
-        <p class="rotulo">Profesionales de la salud</p>
+      <article class="modulo-caja">
+        <p class="modulo-caja-etq">Profesionales de la salud</p>
         <h3>Quiero actualizar mi práctica profesional</h3>
         <p>Criterio clínico, protocolos y programas de formación.</p>
         <div class="acciones">
-          <a class="boton boton-lleno" href="diplomatura.html#diplomatura" data-origen="home-recorridos-diplomatura">Conocer la diplomatura</a>
-          <a class="boton boton-secundario" href="diplomatura.html#cursos" data-origen="home-recorridos-cursos">Ver cursos</a>
+          <a class="boton boton-lleno" href="diplomatura.html">Conocer la diplomatura</a>
+          <a class="boton boton-linea" href="diplomatura.html#cursos">Ver cursos</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ 6. consultas ============ -->
-<section class="seccion seccion-rosada home-consultas" id="consultas" aria-labelledby="t-consultas">
-  <div class="envoltura revelar home-consultas-reja">
-    <div>
+<!-- ============ 6 · consultas ============ -->
+<section class="seccion seccion-clara" id="consultas">
+  <div class="envoltura revelar">
+    <div class="seccion-cabeza">
       <p class="rotulo">Consultas</p>
-      <h2 class="t-titulo" id="t-consultas">Obtén una evaluación completa antes de seguir probando <span class="resalta">soluciones aisladas</span></h2>
+      <h2 class="t-titulo">Obtén una evaluación completa antes de seguir probando soluciones aisladas</h2>
     </div>
-    <article class="tarjeta home-consulta">
-      <h3>Consulta virtual</h3>
-      <p>
-        Eliges la hora en la agenda o escribes por WhatsApp, recibes el enlace de la
-        videollamada y conversas con el Dr. Marco desde donde estés. Ten a mano tus exámenes
-        previos: la consulta revisa tu historia completa, no un síntoma aislado.
+    <div class="modulos">
+      <article class="modulo-caja">
+        <p class="modulo-caja-etq">Virtual</p>
+        <h3>Consulta desde donde estés</h3>
+        <p>
+          Agendas tu hora, recibes el enlace y te conectas desde tu casa. En la consulta, el
+          Dr. Marco revisa contigo tu historia, tus exámenes previos y lo que has intentado hasta
+          ahora, y te explica las opciones antes de que decidas.
+        </p>
+      </article>
+      <article class="modulo-caja">
+        <p class="modulo-caja-etq">Presencial</p>
+        <h3>La Ceja y Medellín, Antioquia</h3>
+        <p>
+          Atención particular, sin EPS. Estamos confirmando los horarios y la disponibilidad de
+          cada sede; los publicamos junto con la agenda.
+        </p>
+      </article>
+    </div>
+    <div class="acciones" style="margin-top: 2rem; align-items: center">
+      
+      <p class="proximamente">Agenda disponible próximamente</p>
+      <a class="boton boton-suave boton-grande" href="https://wa.me/573192894536" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a class="boton boton-linea boton-grande" href="consultas.html">Cómo funciona la consulta</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · formación ============ -->
+<section class="seccion reticula grano" id="formacion">
+  <div class="envoltura revelar">
+    <div class="etiquetas">
+      <span class="etiqueta">124 horas</span>
+      <span class="etiqueta">20 % de ahorro</span>
+    </div>
+    <div class="seccion-cabeza">
+      <p class="rotulo">Diplomatura en Medicina Integrativa</p>
+      <h2 class="t-titulo">Actualiza tu práctica con cinco <em class="acento">cursos</em> especializados</h2>
+      <p class="entrada-clara suave">
+        Accede a 124 horas de formación grabada y estudia cada curso a tu ritmo. Puedes comenzar
+        por el área que necesitas o adquirir la diplomatura completa y ahorrar un 20 %.
       </p>
-      <div class="acciones">
-        <a class="boton boton-lleno" aria-disabled="true" data-pendiente="agenda" title="Disponible pronto" data-origen="home-consultas-agenda">Agendar consulta</a>
-        <a class="boton boton-terciario" aria-disabled="true" data-pendiente="whatsapp" title="Disponible pronto" data-origen="home-consultas-whatsapp">Escribir por WhatsApp</a>
-      </div>
-      <p class="home-nota"><a href="consultas.html">Cómo funciona la consulta</a></p>
-    </article>
-    <!-- CONSULTA PRESENCIAL — OCULTA. Brief §3 y §8: se muestra solo cuando se
-         verifiquen dirección y disponibilidad (sitio.json → sedes[].verificada = false).
-         Al verificar, sacar este bloque del comentario.
-    <article class="tarjeta home-consulta">
-      <h3>Consulta presencial</h3>
-      <p><b>La Ceja</b> · Calle 19 #13b-251, Bella Nova Spa, piso 3</p>
-      <p><b>Medellín</b> · Carrera 78B #49a-32, Laureles-Estadio</p>
-      <div class="acciones">
-        <a class="boton boton-lleno" aria-disabled="true" data-pendiente="agenda" title="Disponible pronto" data-origen="home-consultas-presencial">Agendar consulta presencial</a>
-      </div>
-    </article>
-    -->
+    </div>
+    <div class="cursos">
+      <div class="curso-fila"><b>Sueroterapia</b><span class="cuando">Octubre</span><span class="horas">32 horas</span><span class="precio">USD 250</span></div>
+      <div class="curso-fila"><b>Obesidad y sobrepeso</b><span class="cuando">Octubre</span><span class="horas">32 horas</span><span class="precio">USD 250</span></div>
+      <div class="curso-fila"><b>Ozonoterapia</b><span class="cuando">Noviembre</span><span class="horas">24 horas</span><span class="precio">USD 200</span></div>
+      <div class="curso-fila"><b>Péptidos</b><span class="cuando">Noviembre</span><span class="horas">24 horas</span><span class="precio">USD 200</span></div>
+      <div class="curso-fila"><b>Plasma rico en factores de crecimiento</b><span class="cuando">Noviembre</span><span class="horas">12 horas</span><span class="precio">USD 200</span></div>
+      <div class="curso-fila curso-fila-total"><b>Diplomatura completa</b><span class="cuando">Cinco cursos</span><span class="horas">124 horas</span><span class="precio">USD 880</span></div>
+    </div>
+    <p class="mensaje-horas">124 horas de formación virtual + 16 horas de práctica presencial para certificación</p>
+    <div class="acciones" style="margin-top: 2rem">
+      <a class="boton boton-lleno" href="diplomatura.html#cursos">Ver los cursos y precios</a>
+      <a class="boton boton-linea" href="diplomatura.html#inscripcion">Quiero la diplomatura completa</a>
+      <a class="boton boton-linea" href="diplomatura.html#practica">Conocer las prácticas presenciales</a>
+    </div>
   </div>
 </section>
 
-<!-- ============ 7. formación ============ -->
-<section class="seccion grano home-formacion" aria-labelledby="t-formacion">
-  <span class="geo geo-mostaza home-geo-formacion" aria-hidden="true"></span>
+<!-- ============ 8 · recursos ============ -->
+<section class="seccion seccion-clara" id="recursos">
   <div class="envoltura revelar">
-    <div class="home-etiquetas">
-      <span class="etiqueta">124 HORAS</span>
-      <span class="etiqueta">20 % DE AHORRO</span>
+    <div class="seccion-cabeza">
+      <p class="rotulo">Recursos</p>
+      <h2 class="t-titulo">Herramientas para entender tu caso antes de decidir</h2>
     </div>
-    <h2 class="t-titulo" id="t-formacion">Actualiza tu práctica con cinco <span class="resalta">cursos especializados</span></h2>
-    <p class="entrada home-formacion-texto">
-      Accede a 124 horas de formación grabada y estudia cada curso a tu ritmo. Puedes comenzar
-      por el área que necesitas o adquirir la diplomatura completa y ahorrar un 20 %.
-    </p>
-    <div class="acciones">
-      <a class="boton boton-secundario boton-grande" href="diplomatura.html#cursos" data-origen="home-formacion-cursos">VER LOS CURSOS Y PRECIOS</a>
-      <a class="boton boton-lleno boton-grande" href="diplomatura.html#diplomatura" data-origen="home-formacion-diplomatura">QUIERO LA DIPLOMATURA COMPLETA</a>
-      <a class="boton boton-secundario boton-grande" href="diplomatura.html#practicas" data-origen="home-formacion-practicas">CONOCER LAS PRÁCTICAS PRESENCIALES</a>
+    <div class="modulos">
+      <a class="modulo-caja" href="mapa.html">
+        <p class="modulo-caja-etq">Cuestionario · gratis</p>
+        <h3>El Mapa 3R</h3>
+        <p>Identificarás cómo repartes tu tiempo, tu energía y tu atención entre los siete roles de tu vida.</p>
+        <span class="modulo-caja-ir">Hacer el Mapa 3R →</span>
+      </a>
+      <a class="modulo-caja" href="curso.html">
+        <p class="modulo-caja-etq">Curso</p>
+        <h3>Las 3R y los siete roles</h3>
+        <p>Comprenderás el marco que el Dr. Marco usa en consulta para leer cómo se conectan tus emociones y tu cuerpo.</p>
+        <span class="modulo-caja-ir">Conocer el curso →</span>
+      </a>
     </div>
+    <p style="margin-top: 2rem"><a class="boton boton-lleno" href="recursos.html">Ver todos los recursos</a></p>
   </div>
 </section>
 
-<!-- ============ 8. recursos destacados ============ -->
-<section class="seccion seccion-clara home-recursos" aria-labelledby="t-recursos">
+<!-- ============ 9 · productos y kits ============ -->
+<section class="seccion seccion-media grano" id="productos">
   <div class="envoltura revelar">
-    <p class="rotulo">Recursos</p>
-    <h2 class="t-titulo" id="t-recursos">Herramientas para <span class="resalta">comprender</span> antes de decidir</h2>
-    <ul class="home-recursos-reja">
-      <li>
-        <a class="tarjeta home-recurso" href="mapa.html" data-origen="home-recursos-mapa">
-          <span class="home-recurso-tipo">Herramienta</span>
-          <h3>El Mapa 3R</h3>
-          <p>Identificarás cómo distribuyes tus recursos entre los siete roles de tu vida.</p>
-        </a>
-      </li>
-      <li>
-        <a class="tarjeta home-recurso" href="curso.html" data-origen="home-recursos-curso">
-          <span class="home-recurso-tipo">Curso</span>
-          <h3>El curso de las 3R</h3>
-          <p>Aprenderás el método de Recursos, Recompensas y Reflejos que el Dr. Marco usa en consulta.</p>
-        </a>
-      </li>
-      <li>
-        <a class="tarjeta home-recurso" href="guia.html" data-origen="home-recursos-guia">
-          <span class="home-recurso-tipo">Guía</span>
-          <h3>Guía práctica de manejo inicial de obesidad</h3>
-          <p>Comprenderás qué conviene revisar primero cuando el peso no responde.</p>
-        </a>
-      </li>
-      <li>
-        <a class="tarjeta home-recurso" href="recursos.html" data-origen="home-recursos-libros">
-          <span class="home-recurso-tipo">Libros</span>
-          <h3>Los libros del Dr. Marco</h3>
-          <p>Emociones, sobrepeso y sueroterapia, explicados desde la medicina integrativa.</p>
-        </a>
-      </li>
-    </ul>
-    <div class="acciones">
-      <a class="boton boton-secundario boton-grande" href="recursos.html" data-origen="home-recursos-todos">VER TODOS LOS RECURSOS</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 9. productos y kits ============
-     Sin precios ni indicaciones: los registros sanitarios de Lumineight siguen
-     pendientes (CLAUDE.md, reglas 1-4; brief §8 Kits). -->
-<section class="seccion seccion-suave home-productos" aria-labelledby="t-productos">
-  <div class="envoltura revelar home-productos-reja">
-    <div>
+    <div class="seccion-cabeza">
       <p class="rotulo">Productos y kits</p>
-      <h2 class="t-grande" id="t-productos">Kits de toma oral, con su ficha completa</h2>
-      <p>
-        Cada kit tiene una ficha propia con su presentación, sus componentes y sus advertencias,
-        para que decidas con la información completa. Los kits acompañan un abordaje; no lo
-        reemplazan.
+      <h2 class="t-titulo">Suplementos de toma oral para acompañar el abordaje de consulta</h2>
+      <p class="entrada-clara suave">
+        Cinco kits, uno por problema: metabólico, energía, longevidad, digestivo y defensas.
+        Acompañan un tratamiento; no lo reemplazan. Cada uno tiene su ficha en la página de productos.
       </p>
-      <div class="acciones">
-        <a class="boton boton-terciario" href="productos.html" data-origen="home-productos-ver">Ver productos y kits</a>
-      </div>
     </div>
-    <p class="declaracion home-declaracion">
+    <p style="margin-top: 2rem"><a class="boton boton-lleno" href="productos.html">Ver los productos</a></p>
+    <p class="declaracion">
       El Dr. Marco Sosa es Director Científico de Lumineight, participa en el desarrollo de sus
-      fórmulas y percibe una participación sobre sus ventas. Lo declaramos para que lo tengas en
-      cuenta al valorar cualquier recomendación.
+      fórmulas y percibe una participación sobre sus ventas. Se declara para que lo tengas en
+      cuenta al valorar lo que recomienda.
     </p>
   </div>
 </section>
 
 </main>
 
-<!-- ============ 10. pie ============ -->
 <footer class="pie">
   <div class="envoltura">
     <div class="pie-reja">
       <div>
-        <img src="assets/sello-redondo.png" alt="" class="pie-sello">
+        <img src="assets/sello-redondo.png" alt="Sello del Dr. Marco Sosa" class="pie-sello" width="72" height="72">
         <p class="pie-bio">
           Dr. Marco Aurelio Sosa Giraldo. Médico, registro 050330. Universidad de Antioquia.
-          Mg. en Salud Pública. Máster en Medicina Integrativa. Docente UPB.
+          Magíster en Salud Pública. Máster en Medicina Integrativa. Docente universitario.
         </p>
       </div>
       <div>
-        <h2 class="pie-titulo">El sitio</h2>
+        <h4>El sitio</h4>
         <ul>
           <li><a href="masterclass.html">Masterclasses</a></li>
           <li><a href="consultas.html">Consultas</a></li>
           <li><a href="diplomatura.html">Formación</a></li>
           <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="productos.html">Productos</a></li>
           <li><a href="sobre.html">Sobre el Dr. Marco</a></li>
         </ul>
       </div>
       <div>
-        <h2 class="pie-titulo">Para profesionales</h2>
+        <h4>Para profesionales</h4>
         <ul>
-          <li><a href="diplomatura.html">La Diplomatura</a></li>
+          <li><a href="diplomatura.html">Diplomatura en Medicina Integrativa</a></li>
+          <li><a href="diplomatura.html#cursos">Cursos y precios</a></li>
+          <li><a href="diplomatura.html#practica">Práctica presencial</a></li>
           <li><a href="red.html">La Red</a></li>
           <li><a href="certificado.html">Verificar un certificado</a></li>
-          <li><a href="https://academia.drmarcososa.com" target="_blank" rel="noopener">Academia</a></li>
         </ul>
       </div>
       <div>
-        <h2 class="pie-titulo">Contacto y redes</h2>
+        <h4>Contacto</h4>
         <ul>
+          <li><a href="https://wa.me/573192894536" target="_blank" rel="noopener">WhatsApp</a></li>
           
           
           
           
           
           
-          
-          <li><a href="consultas.html">Agendar consulta</a></li>
+          <li><a href="consultas.html">Consultas</a></li>
         </ul>
       </div>
     </div>
-    <ul class="pie-legales" aria-label="Información legal">
-      <li><a href="privacidad.html">Privacidad</a></li>
+    <ul class="pie-legales">
+      <li><a href="terminos.html">Términos de uso</a></li>
+      <li><a href="privacidad.html">Aviso de privacidad</a></li>
       <li><a href="datos.html">Tratamiento de datos</a></li>
-      <li><a href="terminos.html">Términos</a></li>
       <li><a href="cookies.html">Cookies</a></li>
-      <li><a href="compras.html">Compras</a></li>
-      <li><a href="devoluciones.html">Devoluciones</a></li>
-      <li><a href="promocion.html">Promociones</a></li>
+      <li><a href="compras.html">Condiciones de compra</a></li>
+      <li><a href="devoluciones.html">Retracto y devoluciones</a></li>
       <li><a href="aviso-educativo.html">Aviso educativo</a></li>
     </ul>
     <p class="pie-legal">
       Los contenidos de este sitio son de carácter informativo y educativo. No constituyen
-      diagnóstico ni tratamiento, y no reemplazan la consulta médica presencial.
+      diagnóstico, tratamiento ni prescripción personalizada, y no reemplazan la consulta médica.
       El Dr. Marco Sosa se desempeña como Director Científico de Lumineight, marca en cuyo
       desarrollo de fórmulas participa y sobre cuyas ventas percibe una participación.
       Solo se ofrecerán suplementos dietarios de administración oral que cuenten con registro
@@ -421,6 +498,6 @@
 </footer>
 
 <script src="revelar.js"></script>
-<script src="registro.js" defer></script>
+<script src="registro.js"></script>
 </body>
 </html>

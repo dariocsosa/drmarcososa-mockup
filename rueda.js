@@ -55,12 +55,12 @@
 
   function construir(svg) {
     const mini = svg.classList.contains('mini');
-    const trazo = mini ? 'var(--verde-consultorio)' : 'var(--hueso)';
-    const fondoCentro = mini ? 'var(--verde-consultorio)' : 'var(--hueso)';
+    const trazo = mini ? 'var(--verde-profundo)' : 'var(--crema-calido)';
+    const fondoCentro = mini ? 'var(--verde-profundo)' : 'var(--crema-calido)';
 
     svg.appendChild(el('circle', {
       cx: CX, cy: CY, r: 203, fill: 'none',
-      stroke: 'var(--dorado)', 'stroke-width': 0.7, opacity: 0.45
+      stroke: 'var(--mostaza)', 'stroke-width': 0.7, opacity: 0.45
     }));
 
     const rotuloCentro = el('text', { x: CX, y: CY + (mini ? 8 : 2), class: 'rueda-centro-rol' });
@@ -87,7 +87,7 @@
       ANILLOS.forEach(an => {
         grupo.appendChild(el('path', {
           d: sectorAnular(an.r0, an.r1, a0, a1),
-          fill: 'var(--verde-salvia)',
+          fill: 'var(--verde-eucalipto)',
           'fill-opacity': an.opacidad,
           stroke: trazo,
           'stroke-width': 1.3
@@ -97,7 +97,7 @@
       // Filete dorado en el borde exterior: el metal de la marca, con avaricia.
       grupo.appendChild(el('path', {
         d: sectorAnular(196, 198.8, a0, a1),
-        fill: 'var(--dorado)'
+        fill: 'var(--mostaza)'
       }));
 
       if (!mini) {
@@ -136,7 +136,7 @@
 
     svg.appendChild(el('circle', { cx: CX, cy: CY, r: 62, fill: fondoCentro }));
     svg.appendChild(el('circle', {
-      cx: CX, cy: CY, r: 62, fill: 'none', stroke: 'var(--dorado)', 'stroke-width': 0.9
+      cx: CX, cy: CY, r: 62, fill: 'none', stroke: 'var(--mostaza)', 'stroke-width': 0.9
     }));
     svg.appendChild(rotuloCentro);
     if (!mini) svg.appendChild(pieCentro);

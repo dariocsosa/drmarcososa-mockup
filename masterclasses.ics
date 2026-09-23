@@ -1,0 +1,61 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Dr. Marco Sosa//Masterclasses//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Masterclasses Dr. Marco Sosa
+BEGIN:VEVENT
+UID:masterclass-2026-10-06@drmarcososa.com
+DTSTAMP:20260923T000000Z
+DTSTART:20261007T000000Z
+DTEND:20261007T013000Z
+SUMMARY:Masterclass en vivo: Dónde acumulas grasa y te diré qué comer 
+ — Dr. Marco Sosa
+DESCRIPTION:Masterclass gratuita en vivo online con el Dr. Marco Sosa. El e
+ nlace para conectarte llega a tu correo antes de la transmisión. Registro
+ : https://drmarcososa.com/masterclass.html
+LOCATION:Online
+URL:https://drmarcososa.com/masterclass.html
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:La masterclass empieza en una hora
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:masterclass-2026-10-07@drmarcososa.com
+DTSTAMP:20260923T000000Z
+DTSTART:20261008T000000Z
+DTEND:20261008T013000Z
+SUMMARY:Masterclass en vivo: Por qué no bajas de peso: el engaño hormonal
+  — Dr. Marco Sosa
+DESCRIPTION:Masterclass gratuita en vivo online con el Dr. Marco Sosa. El e
+ nlace para conectarte llega a tu correo antes de la transmisión. Registro
+ : https://drmarcososa.com/masterclass.html
+LOCATION:Online
+URL:https://drmarcososa.com/masterclass.html
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:La masterclass empieza en una hora
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:masterclass-2026-10-08@drmarcososa.com
+DTSTAMP:20260923T000000Z
+DTSTART:20261009T000000Z
+DTEND:20261009T013000Z
+SUMMARY:Masterclass en vivo: El código para acabar con el efecto rebote 
+ — Dr. Marco Sosa
+DESCRIPTION:Masterclass gratuita en vivo online con el Dr. Marco Sosa. El e
+ nlace para conectarte llega a tu correo antes de la transmisión. Registro
+ : https://drmarcososa.com/masterclass.html
+LOCATION:Online
+URL:https://drmarcososa.com/masterclass.html
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:La masterclass empieza en una hora
+END:VALARM
+END:VEVENT
+END:VCALENDAR
