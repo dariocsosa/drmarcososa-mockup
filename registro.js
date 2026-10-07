@@ -48,7 +48,7 @@
     if (modoWhatsapp) {
       const mensaje =
         'Hola, quiero registrarme a la masterclass gratuita en vivo del Dr. Marco Sosa ' +
-        '(6, 7 y 8 de octubre, 7:00 p. m. hora Colombia). ' +
+        '(27, 28 y 29 de octubre, 7:00 p. m. hora Colombia). ' +
         'Mi nombre es: ' + textoDe('nombre') +
         ' · País y ciudad: ' + textoDe('pais') + ', ' + textoDe('ciudad') +
         ' · Perfil: ' + textoDe('perfil') +

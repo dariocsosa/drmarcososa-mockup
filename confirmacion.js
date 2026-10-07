@@ -35,7 +35,7 @@
   const wa = document.getElementById('compartir-whatsapp');
   if (wa) {
     const texto = 'Te invito a las tres masterclasses gratuitas en vivo del Dr. Marco Sosa sobre ' +
-      'obesidad y metabolismo: 6, 7 y 8 de octubre, 7:00 p. m. hora Colombia. Regístrate aquí: ' +
+      'obesidad y metabolismo: 27, 28 y 29 de octubre, 7:00 p. m. hora Colombia. Regístrate aquí: ' +
       conOrigen('compartido-whatsapp');
     wa.href = 'https://wa.me/?text=' + encodeURIComponent(texto);
   }

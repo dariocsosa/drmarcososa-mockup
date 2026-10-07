@@ -11,7 +11,7 @@ python3 Web/publicar.py --dominio
 Estado actual: publicado en el dominio real, con `noindex` — no debe aparecer en Google.
 
 - Base: https://drmarcososa.com
-- Términos de uso y política de privacidad: versión 1.0, 2026-09-23
+- Términos de uso y política de privacidad: versión 1.0, 2026-10-07
 
 ## Páginas
 
