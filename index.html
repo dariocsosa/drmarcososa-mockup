@@ -152,26 +152,90 @@
       <p class="rotulo">Tres sesiones en vivo · sin registro</p>
       <h2 class="t-titulo">Mira las masterclasses <em class="acento">aquí mismo</em></h2>
     </div>
-    <div class="tarjetas-mc">
-      <article class="tarjeta-mc" id="mc-27">
-        <p class="tarjeta-mc-fecha"><span class="tarjeta-mc-dia">27 oct</span><span class="tarjeta-mc-hora">7:00 p. m.</span></p>
-        <h3>¿Por qué las dietas fallan a largo plazo?</h3>
-        <p>El efecto rebote tiene una explicación fisiológica. Comprende por qué el cuerpo tiende a recuperar el peso y por qué las dietas extremas rara vez son la respuesta.</p>
-        <div class="video"><iframe src="https://www.youtube.com/embed/d68sKLX2CAQ" title="¿Por qué las dietas fallan a largo plazo? Dr. Marco Sosa responde en vivo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="videos-reja">
+      <article class="video-tarjeta" id="mc-27">
+        <div class="video"><iframe src="https://www.youtube.com/embed/d68sKLX2CAQ" title="¿Por qué las dietas fallan a largo plazo?" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="video-info">
+          <p class="video-fecha"><b>27 oct</b> · 7:00 p. m. hora Colombia · En vivo</p>
+          <h3>¿Por qué las dietas fallan a largo plazo?</h3>
+          <p>El efecto rebote tiene una explicación fisiológica. Comprende por qué el cuerpo tiende a recuperar el peso y por qué las dietas extremas rara vez son la respuesta.</p>
+        </div>
       </article>
-      <article class="tarjeta-mc" id="mc-28">
-        <p class="tarjeta-mc-fecha"><span class="tarjeta-mc-dia">28 oct</span><span class="tarjeta-mc-hora">7:00 p. m.</span></p>
-        <h3>¿Por qué no bajas de peso?</h3>
-        <p>¿Haces todo bien y la báscula no se mueve? Revisa, con información médica actualizada, qué factores hormonales podrían estar influyendo en tus resultados.</p>
-        <div class="video"><iframe src="https://www.youtube.com/embed/l5pXDhaDvm0" title="¿Por qué no bajas de peso? Pregúntale en vivo al Dr. Marco Sosa" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <article class="video-tarjeta" id="mc-28">
+        <div class="video"><iframe src="https://www.youtube.com/embed/l5pXDhaDvm0" title="¿Por qué no bajas de peso?" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="video-info">
+          <p class="video-fecha"><b>28 oct</b> · 7:00 p. m. hora Colombia · En vivo</p>
+          <h3>¿Por qué no bajas de peso?</h3>
+          <p>¿Haces todo bien y la báscula no se mueve? Revisa, con información médica actualizada, qué factores hormonales podrían estar influyendo en tus resultados.</p>
+        </div>
       </article>
-      <article class="tarjeta-mc" id="mc-29">
-        <p class="tarjeta-mc-fecha"><span class="tarjeta-mc-dia">29 oct</span><span class="tarjeta-mc-hora">7:00 p. m.</span></p>
-        <h3>¿Milagro de internet o ciencia médica real?</h3>
-        <p>Los péptidos están en todas partes. Entiende qué son, qué evidencia hay detrás y cómo reconocer las promesas engañosas.</p>
-        <div class="video"><iframe src="https://www.youtube.com/embed/vRZjiWmsB98" title="¿Milagro de internet o ciencia médica real? Dr. Marco Sosa responde en vivo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <article class="video-tarjeta" id="mc-29">
+        <div class="video"><iframe src="https://www.youtube.com/embed/vRZjiWmsB98" title="¿Milagro de internet o ciencia médica real?" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="video-info">
+          <p class="video-fecha"><b>29 oct</b> · 7:00 p. m. hora Colombia · En vivo</p>
+          <h3>¿Milagro de internet o ciencia médica real?</h3>
+          <p>Los péptidos están en todas partes. Entiende qué son, qué evidencia hay detrás y cómo reconocer las promesas engañosas.</p>
+        </div>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ============ avisos por correo ============ -->
+<section class="seccion seccion-verde" id="registro">
+  <div class="envoltura registro-reja revelar">
+    <div>
+      <p class="etiqueta">Gratis</p>
+      <h2 class="t-titulo" style="margin-top: 1.2rem">No te pierdas ninguna <em class="acento">transmisión</em></h2>
+      <p class="entrada-clara suave">
+        Déjanos tu correo y tu WhatsApp y te avisamos antes de cada masterclass.
+        Verlas no requiere registro.
+      </p>
+    </div>
+    <!-- Registro por correo: registro.js envía el formulario al destino de
+     sitio.json → formularios.masterclass (un Apps Script que guarda la fila
+     en una hoja y avisa por correo). Sin destino, el formulario lo dice y no
+     finge haber registrado a nadie. -->
+<form class="formulario" id="registro-masterclass" method="post" action="https://script.google.com/macros/s/AKfycbwEL4f2gnd-rn-9zBLa86pQoiSxLk0jzFlZespdhnEGVPBkZ0_LNBFhuRnrzF1fnMvrJw/exec">
+  <div class="campo campo-ancho">
+    <label for="r-nombre">Nombre completo</label>
+    <input type="text" id="r-nombre" name="nombre" autocomplete="name" required>
+  </div>
+  <div class="campo campo-ancho">
+    <label for="r-correo">Correo electrónico</label>
+    <input type="email" id="r-correo" name="correo" autocomplete="email" required>
+  </div>
+  <div class="campo">
+    <label for="r-whatsapp">WhatsApp con código de país</label>
+    <input type="tel" id="r-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel"
+           placeholder="+57 300 000 0000" pattern="\+[0-9][0-9 \-]{6,18}" required
+           aria-describedby="r-whatsapp-ayuda">
+    <span class="ayuda" id="r-whatsapp-ayuda">Empieza con + y el código: +57 Colombia, +52 México, +1 República Dominicana.</span>
+  </div>
+  <div class="campo">
+    <label for="r-pais">País</label>
+    <input type="text" id="r-pais" name="pais" autocomplete="country-name" required>
+  </div>
+  <input type="hidden" name="origen" value="">
+  <input type="hidden" name="pagina" value="">
+  <input type="hidden" name="utm_source" value="">
+  <input type="hidden" name="utm_medium" value="">
+  <input type="hidden" name="utm_campaign" value="">
+  <div class="consentimiento">
+    <input type="checkbox" id="r-autorizacion" name="autorizacion" value="si" required>
+    <label for="r-autorizacion">Autorizo el tratamiento de mis datos personales para gestionar mi
+      registro a las masterclasses —confirmación, recordatorios y avisos de cada transmisión—, en los
+      términos de la <a href="privacidad.html">política de privacidad</a>. Puedo revocarlo cuando quiera.</label>
+  </div>
+  <div class="consentimiento">
+    <input type="checkbox" id="r-comunicaciones" name="comunicaciones" value="si">
+    <label for="r-comunicaciones">Opcional: quiero recibir información sobre otros programas y
+      contenidos del Dr. Marco Sosa (diplomatura, cursos). Ver la
+      <a href="privacidad.html#finalidades">política de privacidad</a>.</label>
+  </div>
+  <button class="boton boton-lleno boton-grande" type="submit">Quiero recibir el aviso</button>
+  <p class="formulario-estado" role="status" aria-live="polite"></p>
+</form>
   </div>
 </section>
 
@@ -410,5 +474,6 @@
 </footer>
 
 <script src="revelar.js"></script>
+<script src="registro.js"></script>
 </body>
 </html>

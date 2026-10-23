@@ -24,44 +24,10 @@
   const boton = forma.querySelector('button[type="submit"]');
   const decir = (texto, clase) => { estado.textContent = texto; estado.className = 'formulario-estado ' + (clase || ''); };
 
-  // Modo WhatsApp: sin destino de formulario pero con número. Se ocultan y
-  // desactivan correo, teléfono y autorización —no se guarda nada acá— y el
-  // botón arma el mensaje con lo que la persona llenó.
   const destinoInicial = (forma.getAttribute('action') || '').trim();
-  const numero = (forma.dataset.whatsapp || '').replace(/\D/g, '');
-  const modoWhatsapp = !destinoInicial && numero.length > 0;
-  if (modoWhatsapp) {
-    forma.querySelectorAll('[data-modo="formulario"]').forEach(n => {
-      n.hidden = true;
-      n.querySelectorAll('input, select').forEach(c => { c.disabled = true; });
-    });
-    forma.querySelectorAll('[data-modo="whatsapp"]').forEach(n => { n.hidden = false; });
-    boton.textContent = 'Registrarme por WhatsApp';
-  }
-  const textoDe = nombre => {
-    const c = forma.elements[nombre];
-    return c.tagName === 'SELECT' ? c.options[c.selectedIndex].text : c.value.trim();
-  };
 
   forma.addEventListener('submit', async e => {
     e.preventDefault();
-    if (modoWhatsapp) {
-      const mensaje =
-        'Hola, quiero registrarme a la masterclass gratuita en vivo del Dr. Marco Sosa ' +
-        '(27, 28 y 29 de octubre, 7:00 p. m. hora Colombia). ' +
-        'Mi nombre es: ' + textoDe('nombre') +
-        ' · País y ciudad: ' + textoDe('pais') + ', ' + textoDe('ciudad') +
-        ' · Perfil: ' + textoDe('perfil') +
-        ' · Me interesa: ' + textoDe('interes');
-      const url = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(mensaje);
-      // sin 'noopener' en los rasgos: con él, window.open siempre devuelve null
-      // y no se podría saber si el navegador bloqueó la pestaña nueva
-      const ventana = window.open(url, '_blank');
-      if (ventana) ventana.opener = null;
-      else location.href = url;
-      decir('Se abrió WhatsApp con tu mensaje. Envíalo y te respondemos con los enlaces.', 'ok');
-      return;
-    }
     const destino = destinoInicial;
     const origen = leer() || 'directo';
     forma.elements.origen.value = origen;
@@ -73,12 +39,12 @@
       return;
     }
     boton.disabled = true;
-    decir('Enviando tu registro…');
+    decir('Enviando…');
     try {
       // no-cors: sirve para cualquier proveedor que reciba un POST de formulario.
       // La respuesta es opaca; lo que sí se detecta es la falta de conexión.
       await fetch(destino, { method: 'POST', body: new FormData(forma), mode: 'no-cors' });
-      decir('Tu registro está listo. Revisa tu correo para confirmar tu acceso a las tres masterclasses.', 'ok');
+      decir('Listo, quedaste registrado. Revisa tu correo.', 'ok');
       setTimeout(() => {
         location.href = 'gracias.html?de=masterclass&origen=' + encodeURIComponent(origen);
       }, 1200);
