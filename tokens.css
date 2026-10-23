@@ -32,6 +32,7 @@
 
   /* Estado — solo para certificados revocados */
   --alerta:          #8C4A41;
+  --alerta-fuerte:   #6B1535; /* granate de las figuras de los libros: "fuera de la norma" (fig06) */
 
   /* Semánticos */
   --fondo:           var(--crema-calido);
