@@ -950,3 +950,10 @@ a.modulo-caja:hover { border-color: var(--verde-bosque); background: var(--verde
 .video-info h3 { margin: 0 0 0.5rem; font-size: 1.15rem; line-height: 1.25; }
 .video-info p:last-child { margin: 0; font-size: 0.95rem; }
 @media (max-width: 900px) { .videos-reja { grid-template-columns: 1fr; gap: 2.2rem; } }
+
+/* Descarga de recursos: portada del PDF junto al formulario */
+.recurso-portada { width: min(100%, 300px); height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.28); display: block; }
+@media (max-width: 900px) { .recurso-portada { width: min(70%, 240px); } }
+
+/* atributo hidden siempre gana (los botones lo pisaban con display:inline-flex) */
+[hidden] { display: none !important; }

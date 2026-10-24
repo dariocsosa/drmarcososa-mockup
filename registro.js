@@ -44,9 +44,10 @@
       // no-cors: sirve para cualquier proveedor que reciba un POST de formulario.
       // La respuesta es opaca; lo que sí se detecta es la falta de conexión.
       await fetch(destino, { method: 'POST', body: new FormData(forma), mode: 'no-cors' });
-      decir('Listo, quedaste registrado. Revisa tu correo.', 'ok');
+      decir(forma.dataset.mensaje || 'Listo, quedaste registrado. Revisa tu correo.', 'ok');
       setTimeout(() => {
-        location.href = 'gracias.html?de=masterclass&origen=' + encodeURIComponent(origen);
+        // un formulario puede traer su propio destino de éxito (p. ej. la descarga de un recurso)
+        location.href = forma.dataset.exito || ('gracias.html?de=masterclass&origen=' + encodeURIComponent(origen));
       }, 1200);
     } catch (_) {
       boton.disabled = false;
