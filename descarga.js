@@ -25,9 +25,9 @@
   if (ok) {
     mostrar('paso-listo', true);
     botones.forEach(b => { b.hidden = false; });
-    // con un solo archivo la descarga arranca sola; con varios quedan los botones,
-    // porque el navegador pide permiso para bajar varios a la vez
-    if (botones.length === 1) setTimeout(() => botones[0].click(), 600);
+    // las descargas arrancan solas, una tras otra; si el navegador bloquea alguna
+    // (pide permiso para bajar varios archivos), quedan los botones
+    botones.forEach((b, i) => setTimeout(() => b.click(), 600 + i * 1200));
     return;
   }
 
