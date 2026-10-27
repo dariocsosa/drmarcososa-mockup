@@ -6,7 +6,10 @@
 (() => {
   'use strict';
   const params = new URLSearchParams(location.search);
-  const r = params.get('r') || '';
+  // los enlaces con el nombre anterior siguen funcionando
+  const alias = { 'dieta-antiinflamatoria': 'plan-antiinflamatorio', 'dieta-disbiosis': 'plan-disbiosis' };  // y 'guias' es el enlace de las dos guías
+  const r0 = params.get('r') || '';
+  const r = alias[r0] || r0;
   const ok = params.get('ok') === '1';
   const hallado = document.querySelector('[data-recurso="' + r + '"]');
   const mostrar = (id, si) => { const e = document.getElementById(id); if (e) e.hidden = !si; };
@@ -17,15 +20,14 @@
     return;
   }
   hallado.hidden = false;
-  const boton = document.querySelector('[data-descarga="' + r + '"]');
+  const botones = document.querySelectorAll('[data-descarga="' + r + '"]');
 
   if (ok) {
     mostrar('paso-listo', true);
-    if (boton) {
-      boton.hidden = false;
-      // la descarga arranca sola; el botón queda por si el navegador la bloquea
-      setTimeout(() => boton.click(), 600);
-    }
+    botones.forEach(b => { b.hidden = false; });
+    // con un solo archivo la descarga arranca sola; con varios quedan los botones,
+    // porque el navegador pide permiso para bajar varios a la vez
+    if (botones.length === 1) setTimeout(() => botones[0].click(), 600);
     return;
   }
 
@@ -33,6 +35,6 @@
   const forma = document.getElementById('registro-masterclass');
   if (!forma) return;
   forma.dataset.exito = 'descarga.html?r=' + encodeURIComponent(r) + '&ok=1';
-  // la fuente de conversión lleva el recurso: "youtube-mc1 · dieta-antiinflamatoria"
+  // la fuente de conversión lleva el recurso: "youtube-mc1 · plan-antiinflamatorio"
   try { sessionStorage.setItem('mc-origen', (params.get('origen') || 'directo') + ' · ' + r); } catch (_) {}
 })();
