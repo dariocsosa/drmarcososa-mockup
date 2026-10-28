@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Guías de clase</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Archivo:wght@400;500;600&display=swap">
+<style>
+:root {
+  --verde-profundo: #173F33; --verde-bosque: #1F5142; --verde-salvia: #9BAFA4; --verde-claro: #E4EDE7;
+  --crema: #F7F1E5; --crema-claro: #FFF9EE; --mostaza: #E4AA18; --tinta: #15261F;
+  --bg: var(--crema); --card: var(--crema-claro); --fg: var(--tinta); --fg2: #43554C; --head: var(--verde-profundo); --linea: #D5D9CC;
+  --display: "Fraunces", Georgia, serif; --texto: "Archivo", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0E1713; --card: #172821; --fg: #F1EFE3; --fg2: #B3C1B8; --head: #E4EDE7; --linea: #2B3F36; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--texto); font-size: 17px; line-height: 1.45;
+  padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 60px; }
+main { max-width: 760px; margin: 0 auto; }
+h1 { font-family: var(--display); color: var(--head); font-size: clamp(1.8rem, 1.3rem + 2vw, 2.6rem); line-height: 1.1; margin: 0 0 8px; text-wrap: balance; }
+.sub { color: var(--fg2); margin: 0 0 28px; max-width: 60ch; }
+.lista { display: grid; gap: 12px; }
+a.curso { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: center; text-decoration: none; color: var(--fg);
+  background: var(--card); border: 1px solid var(--linea); border-radius: 14px; padding: 18px 20px; }
+a.curso:hover { border-color: var(--verde-bosque); }
+a.curso:focus-visible { outline: 3px solid var(--mostaza); outline-offset: 2px; }
+a.curso b { font-family: var(--display); font-size: 1.35rem; color: var(--head); }
+a.curso span { color: var(--fg2); font-size: .95rem; }
+a.curso i { font-style: normal; font-weight: 600; color: var(--verde-bosque); }
+:root[data-theme="dark"] a.curso i { color: var(--verde-salvia); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) a.curso i { color: var(--verde-salvia); } }
+.nota { margin-top: 26px; color: var(--fg2); font-size: .95rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Guías de clase</h1>
+  <p class="sub">Puntos clave, tiempos y diapositivas de cada módulo, para grabar con la guía a la vista. Se abren con la clave que te dio Darío.</p>
+  <div class="lista">
+    <a class="curso" href="guia-clase-obesidad.html"><b>Entiende tu cuerpo, controla tu peso</b><i>Abrir</i><span>Obesidad · 12 módulos</span></a>
+    <a class="curso" href="guia-clase-sueroterapia.html"><b>Revitaliza tu cuerpo</b><i>Abrir</i><span>Sueroterapia · 30 módulos</span></a>
+    <a class="curso" href="guia-clase-peptidos.html"><b>Péptidos</b><i>Abrir</i><span>Péptidos · 11 módulos</span></a>
+  </div>
+  <p class="nota">La clave se pide la primera vez en cada aparato y queda guardada. Si recargas la página, sigues donde ibas.</p>
+</main>
+</body>
+</html>
