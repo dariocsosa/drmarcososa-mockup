@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Curso de péptidos · materiales</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Archivo:wght@400;500;600&display=swap">
+<style>
+:root { --verde-profundo:#173F33; --verde-bosque:#1F5142; --verde-claro:#E4EDE7; --crema:#F7F1E5; --crema-claro:#FFF9EE; --mostaza:#E4AA18; --tinta:#15261F;
+  --bg:var(--crema); --card:var(--crema-claro); --fg:var(--tinta); --fg2:#43554C; --head:var(--verde-profundo); --linea:#D5D9CC;
+  --display:"Fraunces",Georgia,serif; --texto:"Archivo","Segoe UI",system-ui,sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0E1713; --card:#172821; --fg:#F1EFE3; --fg2:#B3C1B8; --head:#E4EDE7; --linea:#2B3F36; color-scheme:dark; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:var(--texto); font-size:16px; line-height:1.45;
+  padding-inline:max(16px, env(safe-area-inset-left,0px)) max(16px, env(safe-area-inset-right,0px)); padding-block:36px 70px; }
+main { max-width:980px; margin:0 auto; }
+h1 { font-family:var(--display); color:var(--head); font-size:clamp(1.8rem,1.3rem+2vw,2.6rem); line-height:1.1; margin:0 0 8px; text-wrap:balance; }
+h2 { font-family:var(--display); color:var(--head); font-size:1.3rem; margin:1.8em 0 .5em; border-top:2px solid var(--mostaza); padding-top:.4em; }
+.sub { color:var(--fg2); max-width:70ch; }
+.fila { display:grid; grid-template-columns:54px 1fr auto; gap:12px; align-items:center; padding:10px 14px; margin:6px 0; background:var(--card); border:1px solid var(--linea); border-radius:10px; }
+.id { font-family:var(--display); font-weight:700; color:var(--head); }
+.tt { min-width:0; }
+.bt { display:flex; gap:8px; flex-wrap:wrap; }
+button, .enlace { font:inherit; font-weight:600; padding:8px 14px; border:0; border-radius:8px; background:var(--verde-bosque); color:#fff; cursor:pointer; text-decoration:none; display:inline-block; }
+button:disabled { opacity:.5; cursor:wait; }
+#candado { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:18px 0; padding:14px; background:var(--card); border:1px solid var(--linea); border-radius:12px; }
+#candado input { flex:1 1 220px; padding:10px; font:inherit; border:1px solid var(--linea); border-radius:8px; background:var(--bg); color:var(--fg); }
+#msg { color:var(--fg2); min-height:1.3em; }
+@media (max-width:640px) { .fila { grid-template-columns:44px 1fr; } .bt { grid-column:1 / -1; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Péptidos terapéuticos en la práctica clínica: del ensayo al paciente</h1>
+<p class="sub">Curso de 24 horas, 32 módulos de 45 minutos. Presentaciones por módulo (PowerPoint y PDF) y guía de clase con minutos y puntos para grabar. Los archivos están cifrados: escribe la clave una vez y descarga.</p>
+<p><a class="enlace" href="guia-clase-curso-peptidos.html">Abrir la guía de clase</a></p>
+<div id="candado"><label for="k"><b>Clave</b></label><input id="k" type="password" autocomplete="off"><button id="guardar" type="button">Guardar</button><span id="msg" role="status"></span></div>
+<h2>Parte 1 · Fundamentos</h2>
+<div class="fila"><span class="id">P01</span><span class="tt">Qué es un péptido: estructura, receptores y clases terapéuticas</span><span class="bt"><button type="button" data-f="curso-peptidos/P01.pptx.enc" data-n="P01.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P01.pdf.enc" data-n="P01.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P02</span><span class="tt">De la molécula al medicamento: ensayos, agencias y niveles de evidencia</span><span class="bt"><button type="button" data-f="curso-peptidos/P02.pptx.enc" data-n="P02.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P02.pdf.enc" data-n="P02.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P03</span><span class="tt">Cómo leer un ensayo: desenlaces, estimandos, tamaño del efecto y sesgos</span><span class="bt"><button type="button" data-f="curso-peptidos/P03.pptx.enc" data-n="P03.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P03.pdf.enc" data-n="P03.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P04</span><span class="tt">Farmacología práctica: vías, vida media, inmunogenicidad y calidad del producto</span><span class="bt"><button type="button" data-f="curso-peptidos/P04.pptx.enc" data-n="P04.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P04.pdf.enc" data-n="P04.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P05</span><span class="tt">Seguridad, consentimiento y comunicación con el paciente</span><span class="bt"><button type="button" data-f="curso-peptidos/P05.pptx.enc" data-n="P05.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P05.pdf.enc" data-n="P05.pdf">PDF</button></span></div>
+<h2>Parte 2 · Obesidad y metabolismo</h2>
+<div class="fila"><span class="id">P06</span><span class="tt">Apetito, saciedad y sistema incretina: GLP-1, GIP, leptina y grelina</span><span class="bt"><button type="button" data-f="curso-peptidos/P06.pptx.enc" data-n="P06.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P06.pdf.enc" data-n="P06.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P07</span><span class="tt">Obesidad: semaglutida, liraglutida y tirzepatida, mecanismo y eficacia</span><span class="bt"><button type="button" data-f="curso-peptidos/P07.pptx.enc" data-n="P07.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P07.pdf.enc" data-n="P07.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P08</span><span class="tt">Dosis de ficha, titulación y esquemas de semaglutida, liraglutida y tirzepatida</span><span class="bt"><button type="button" data-f="curso-peptidos/P08.pptx.enc" data-n="P08.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P08.pdf.enc" data-n="P08.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P09</span><span class="tt">Contraindicaciones, efectos adversos y signos de alarma de las incretinas</span><span class="bt"><button type="button" data-f="curso-peptidos/P09.pptx.enc" data-n="P09.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P09.pdf.enc" data-n="P09.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P10</span><span class="tt">Uso clínico de las incretinas: selección, nutrición y músculo, mantenimiento y suspensión</span><span class="bt"><button type="button" data-f="curso-peptidos/P10.pptx.enc" data-n="P10.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P10.pdf.enc" data-n="P10.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P11</span><span class="tt">Diabetes tipo 2 y prediabetes: incretinas, insulinas y pramlintida</span><span class="bt"><button type="button" data-f="curso-peptidos/P11.pptx.enc" data-n="P11.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P11.pdf.enc" data-n="P11.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P12</span><span class="tt">Fármacos en investigación: retatrutida y otras moléculas en fase 3</span><span class="bt"><button type="button" data-f="curso-peptidos/P12.pptx.enc" data-n="P12.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P12.pdf.enc" data-n="P12.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P13</span><span class="tt">Obesidad genética y poblaciones especiales: setmelanotida, adolescentes, embarazo y adulto mayor</span><span class="bt"><button type="button" data-f="curso-peptidos/P13.pptx.enc" data-n="P13.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P13.pdf.enc" data-n="P13.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P14</span><span class="tt">Eje GH-IGF-1 y composición corporal: tesamorelina, hormona de crecimiento y mecasermina</span><span class="bt"><button type="button" data-f="curso-peptidos/P14.pptx.enc" data-n="P14.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P14.pdf.enc" data-n="P14.pdf">PDF</button></span></div>
+<h2>Parte 3 · Órganos y sistemas</h2>
+<div class="fila"><span class="id">P15</span><span class="tt">Corazón, riñón y metabolismo: SELECT, FLOW y STEP-HFpEF</span><span class="bt"><button type="button" data-f="curso-peptidos/P15.pptx.enc" data-n="P15.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P15.pdf.enc" data-n="P15.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P16</span><span class="tt">Hígado graso (MASLD y MASH) y péptidos</span><span class="bt"><button type="button" data-f="curso-peptidos/P16.pptx.enc" data-n="P16.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P16.pdf.enc" data-n="P16.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P17</span><span class="tt">Apnea del sueño y artrosis de rodilla con péptidos</span><span class="bt"><button type="button" data-f="curso-peptidos/P17.pptx.enc" data-n="P17.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P17.pdf.enc" data-n="P17.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P18</span><span class="tt">Hueso y calcio: teriparatida, abaloparatida, calcitonina y hormona paratiroidea</span><span class="bt"><button type="button" data-f="curso-peptidos/P18.pptx.enc" data-n="P18.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P18.pdf.enc" data-n="P18.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P19</span><span class="tt">Crecimiento y desarrollo: somatropina, vosoritida y mecasermina</span><span class="bt"><button type="button" data-f="curso-peptidos/P19.pptx.enc" data-n="P19.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P19.pdf.enc" data-n="P19.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P20</span><span class="tt">Hipófisis y agua corporal: octreotida, lanreotida, pasireotida, desmopresina y vasopresina</span><span class="bt"><button type="button" data-f="curso-peptidos/P20.pptx.enc" data-n="P20.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P20.pdf.enc" data-n="P20.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P21</span><span class="tt">Reproducción: gonadotropinas, análogos de GnRH y oxitocina</span><span class="bt"><button type="button" data-f="curso-peptidos/P21.pptx.enc" data-n="P21.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P21.pdf.enc" data-n="P21.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P22</span><span class="tt">Aparato digestivo: teduglutida, linaclotida, octreotida y péptidos intestinales</span><span class="bt"><button type="button" data-f="curso-peptidos/P22.pptx.enc" data-n="P22.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P22.pdf.enc" data-n="P22.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P23</span><span class="tt">Piel y estética: péptidos tópicos, colágeno hidrolizado y bremelanotida</span><span class="bt"><button type="button" data-f="curso-peptidos/P23.pptx.enc" data-n="P23.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P23.pdf.enc" data-n="P23.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P24</span><span class="tt">Dolor, inflamación y neurología: ziconotida, icatibant y glatiramer</span><span class="bt"><button type="button" data-f="curso-peptidos/P24.pptx.enc" data-n="P24.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P24.pdf.enc" data-n="P24.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P25</span><span class="tt">Salud mental y adicciones: incretinas, oxitocina y otros péptidos en investigación</span><span class="bt"><button type="button" data-f="curso-peptidos/P25.pptx.enc" data-n="P25.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P25.pdf.enc" data-n="P25.pdf">PDF</button></span></div>
+<h2>Parte 4 · Infecciones, inmunidad, cáncer y enfermedades raras</h2>
+<div class="fila"><span class="id">P26</span><span class="tt">Péptidos antimicrobianos y antibióticos peptídicos: daptomicina, colistina y glucopéptidos</span><span class="bt"><button type="button" data-f="curso-peptidos/P26.pptx.enc" data-n="P26.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P26.pdf.enc" data-n="P26.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P27</span><span class="tt">Inmunomodulación: timosina alfa-1, ciclosporina y péptidos inhibidores del complemento</span><span class="bt"><button type="button" data-f="curso-peptidos/P27.pptx.enc" data-n="P27.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P27.pdf.enc" data-n="P27.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P28</span><span class="tt">Oncología: análogos de GnRH, análogos de somatostatina y radioligandos peptídicos</span><span class="bt"><button type="button" data-f="curso-peptidos/P28.pptx.enc" data-n="P28.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P28.pdf.enc" data-n="P28.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P29</span><span class="tt">Enfermedades raras y huérfanas: panorama de péptidos aprobados</span><span class="bt"><button type="button" data-f="curso-peptidos/P29.pptx.enc" data-n="P29.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P29.pdf.enc" data-n="P29.pdf">PDF</button></span></div>
+<h2>Parte 5 · Norma, mercado y práctica integrativa</h2>
+<div class="fila"><span class="id">P30</span><span class="tt">Péptidos sin registro: qué son, qué evidencia hay, estatus regulatorio y riesgos</span><span class="bt"><button type="button" data-f="curso-peptidos/P30.pptx.enc" data-n="P30.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P30.pdf.enc" data-n="P30.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P31</span><span class="tt">Mercado gris, falsificaciones y qué decirle al paciente</span><span class="bt"><button type="button" data-f="curso-peptidos/P31.pptx.enc" data-n="P31.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P31.pdf.enc" data-n="P31.pdf">PDF</button></span></div>
+<div class="fila"><span class="id">P32</span><span class="tt">Integración en medicina integrativa y casos clínicos: plan de manejo, ética y síntesis del curso</span><span class="bt"><button type="button" data-f="curso-peptidos/P32.pptx.enc" data-n="P32.pptx">PowerPoint</button><button type="button" data-f="curso-peptidos/P32.pdf.enc" data-n="P32.pdf">PDF</button></span></div>
+</main>
+<script>
+var $ = function (i) { return document.getElementById(i); };
+try { var c = localStorage.getItem('guia-clave'); if (c) { $('k').value = c; $('msg').textContent = 'Clave recordada en este aparato.'; } } catch (e) {}
+$('guardar').onclick = function () { try { localStorage.setItem('guia-clave', $('k').value.trim()); $('msg').textContent = 'Clave guardada.'; } catch (e) { $('msg').textContent = 'No se pudo guardar; se usará mientras la página esté abierta.'; } };
+async function descifrar(buf, clave) {
+  var raw = new Uint8Array(buf), sal = raw.slice(0, 16), iv = raw.slice(16, 28), ct = raw.slice(28);
+  var base = await crypto.subtle.importKey('raw', new TextEncoder().encode(clave), 'PBKDF2', false, ['deriveKey']);
+  var k = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: sal, iterations: 200000, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+  return crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, k, ct);
+}
+document.addEventListener('click', async function (e) {
+  var b = e.target.closest('button[data-f]'); if (!b) return;
+  var clave = $('k').value.trim(); if (!clave) { $('msg').textContent = 'Escribe la clave primero.'; return; }
+  b.disabled = true; $('msg').textContent = 'Descifrando ' + b.getAttribute('data-n') + '…';
+  try {
+    var r = await fetch(b.getAttribute('data-f')); var buf = await r.arrayBuffer();
+    var pt = await descifrar(buf, clave);
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([pt])); a.download = b.getAttribute('data-n'); document.body.appendChild(a); a.click(); a.remove();
+    $('msg').textContent = 'Listo: ' + b.getAttribute('data-n');
+  } catch (err) { $('msg').textContent = 'No se pudo abrir: revisa la clave.'; }
+  b.disabled = false;
+});
+</script>
+</body>
+</html>
