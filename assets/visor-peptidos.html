@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Visor · Péptidos del Dr. Marco</title>
+<title>Péptidos · visor de la presentación</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Archivo:wght@400;500;600&display=swap">
 <style>
 :root { --verde-profundo:#173F33; --verde-bosque:#1F5142; --verde-salvia:#9BAFA4; --verde-claro:#E4EDE7; --crema:#F7F1E5; --crema-claro:#FFF9EE; --mostaza:#E4AA18; --tinta:#15261F;
@@ -37,6 +37,8 @@ button:focus-visible, input:focus-visible { outline:3px solid var(--mostaza); ou
 #oculta h2 { font-family:var(--display); margin:0 0 8px; }
 #oculta p { color:#c9d4cd; margin:6px 0; }
 #cargando { position:absolute; color:#c9d4cd; }
+#guion { display:none; padding:10px 14px; border:1px solid var(--linea); border-radius:10px; background:var(--card); font-size:1.02rem; }
+#guion b { color:var(--fg2); text-transform:uppercase; font-size:.78rem; letter-spacing:.08em; display:block; margin-bottom:2px; }
 #nota { display:none; padding:10px 14px; border:1px dashed var(--aviso); border-radius:10px; background:color-mix(in srgb, var(--aviso) 9%, var(--card)); font-size:.98rem; }
 #nota b { color:var(--aviso); text-transform:uppercase; font-size:.78rem; letter-spacing:.08em; display:block; margin-bottom:2px; }
 #ctrl { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
@@ -64,6 +66,7 @@ button:focus-visible, input:focus-visible { outline:3px solid var(--mostaza); ou
 <nav id="indice" aria-label="Índice de diapositivas"><input id="q" type="search" placeholder="Buscar en los títulos" aria-label="Buscar"><div id="lista"></div></nav>
 <main id="escena">
 <div id="lienzo"><span id="cargando">Cargando…</span><img id="img" alt=""><div id="oculta"><h2 id="oh"></h2><p id="om"></p></div></div>
+<div id="guion"><b>Para decir</b><span id="gt"></span></div>
 <div id="nota"><b>Ojo con esta diapositiva</b><span id="nt"></span></div>
 <div id="ctrl"><button class="sec gr" id="ant" type="button">◂ Anterior</button><button class="gr" id="sig" type="button">Siguiente ▸</button><div class="info"><b id="ntit"></b><br><span id="nsec"></span></div><label for="ir">Ir a</label><input id="ir" type="number" min="1" inputmode="numeric"></div>
 </main>
@@ -87,7 +90,7 @@ async function entrar(clave, guardar) {
   if (guardar) { try { localStorage.setItem('guia-clave', clave); } catch (e) {} }
   $('candado').style.display = 'none'; $('app').style.display = 'flex';
   $('tit').textContent = D.titulo + ' · ' + D.autor;
-  armarIndice(); var n = 0; try { n = parseInt(localStorage.getItem('visor-pep-n') || '0', 10); } catch (e) {}
+  armarIndice(); var n = 0; try { n = parseInt(localStorage.getItem('visor-peptidos-n') || '0', 10); } catch (e) {}
   ir(n >= 0 && n < D.slides.length ? n : 0); return true;
 }
 function armarIndice() {
@@ -111,11 +114,11 @@ async function imagen(i) {
 async function ir(i) {
   if (i < 0 || i >= D.slides.length) return;
   idx = i; var d = D.slides[i];
-  try { localStorage.setItem('visor-pep-n', String(i)); } catch (e) {}
+  try { localStorage.setItem('visor-peptidos-n', String(i)); } catch (e) {}
   $('prog').textContent = d.n + ' de ' + D.slides[D.slides.length - 1].n;
   $('ntit').textContent = d.titulo; var sec = D.secciones.filter(function (s) { return d.n >= s.desde && d.n <= s.hasta; })[0]; $('nsec').textContent = sec ? sec.nombre : '';
   $('ant').disabled = i === 0; $('sig').disabled = i === D.slides.length - 1; $('ir').value = d.n;
-  $('nota').style.display = d.nota ? 'block' : 'none'; $('nt').textContent = d.nota || '';
+  $('nota').style.display = d.nota ? 'block' : 'none'; $('nt').textContent = d.nota || ''; $('guion').style.display = d.guion ? 'block' : 'none'; $('gt').textContent = d.guion || '';
   Array.prototype.forEach.call(document.querySelectorAll('.it'), function (b) { b.classList.toggle('act', parseInt(b.getAttribute('data-i'), 10) === i); });
   var act = document.querySelector('.it.act'); if (act && act.scrollIntoView) act.scrollIntoView({ block: 'nearest' });
   if (d.oculta) { $('img').style.display = 'none'; $('oculta').style.display = 'block'; $('oh').textContent = 'Diapositiva ' + d.n + ': ' + d.titulo; $('om').textContent = d.motivo; $('cargando').style.display = 'none'; }
