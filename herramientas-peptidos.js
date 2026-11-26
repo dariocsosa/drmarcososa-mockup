@@ -32,7 +32,7 @@
     document.querySelectorAll('.herr-panel').forEach(p => { p.hidden = p.id !== 'p-' + panel; });
     if (PROTEGIDAS.includes(panel)) abrirProtegido(panel); else if (panel === 'clases') Acceso.evento('clases_vistas', '');
   }
-  const PROTEGIDAS = ['perlas', 'esquemas'];
+  const PROTEGIDAS = [];
   pestanas.forEach(t => t.addEventListener('click', () => { abrir(t.dataset.panel); history.replaceState(null, '', '#' + t.dataset.panel); }));
   pestanas.forEach((t, i) => t.addEventListener('keydown', e => {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
@@ -165,7 +165,7 @@
   function resumenTexto() {
     const filas = Object.keys(memoria.ultimo || {}).sort().map(k => `Capítulo ${k}: ${memoria.ultimo[k]} de ${D.caps[k - 1].preguntas.length}`);
     const sab = Object.keys(memoria.perlas).filter(k => memoria.perlas[k]).length;
-    return ['Autoevaluación del libro Péptidos: descifra tu cuerpo', ...(filas.length ? filas : ['Sin capítulos completados']), `Perlas que dice dominar: ${sab} de 21`].join(' · ');
+    return ['Autoevaluación del libro Péptidos: descifra tu cuerpo', ...(filas.length ? filas : ['Sin capítulos completados'])].join(' · ');
   }
   async function enviarResultado(e) {
     const b = e.currentTarget; b.disabled = true; b.textContent = 'Enviando…';
@@ -175,7 +175,7 @@
   const params = new URLSearchParams(location.search);
 
   /* ---------- arranque ---------- */
-  pintarCaps(); candado('perlas'); candado('esquemas');
+  pintarCaps(); 
   const cap = parseInt(params.get('cap'), 10), hash = location.hash.replace('#', '');
   if (['clases', 'auto'].includes(hash)) abrir(hash);
   else if (PROTEGIDAS.includes(hash)) { pestanas.forEach(t => t.setAttribute('aria-selected', t.dataset.panel === hash ? 'true' : 'false')); document.querySelectorAll('.herr-panel').forEach(p => { p.hidden = p.id !== 'p-' + hash; }); }
