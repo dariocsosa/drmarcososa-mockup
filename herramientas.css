@@ -1,0 +1,78 @@
+/* Herramientas del libro. Usa solo los tokens de Marca/tokens.css. */
+.herr-cabeza{display:grid;grid-template-columns:1fr minmax(120px,200px);gap:clamp(1.2rem,4vw,3rem);align-items:center}
+.herr-portada{width:100%;height:auto;border-radius:4px;box-shadow:var(--sombra-suave);justify-self:end}
+@media(max-width:640px){.herr-cabeza{grid-template-columns:1fr}.herr-portada{max-width:150px;justify-self:start}}
+
+.herr-pestanas{display:flex;flex-wrap:wrap;gap:.4rem;border-bottom:1px solid var(--linea);margin-bottom:1.6rem}
+.herr-pestanas button{font:600 .9rem var(--cuerpo,inherit);padding:.8rem 1.1rem;border:0;background:none;color:var(--tinta-suave);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.herr-pestanas button[aria-selected="true"]{color:var(--verde-profundo);border-bottom-color:var(--mostaza)}
+.herr-pestanas button:focus-visible,.herr button:focus-visible,.herr a:focus-visible{outline:3px solid var(--verde-bosque);outline-offset:2px}
+.herr-guia{color:var(--tinta-suave);max-width:62ch;margin:0 0 1.2rem}
+
+/* capítulos */
+.herr-caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:.7rem;margin-bottom:1.8rem}
+.herr-cap{text-align:left;padding:.9rem 1rem;border:1px solid var(--linea);border-radius:6px;background:var(--crema-claro);cursor:pointer;display:grid;gap:.2rem;font:inherit;color:var(--tinta)}
+.herr-cap b{font:600 .62rem var(--cuerpo,inherit);letter-spacing:.16em;text-transform:uppercase;color:var(--verde-eucalipto)}
+.herr-cap span{font:600 1rem var(--display);color:var(--verde-profundo);line-height:1.2}
+.herr-cap small{color:var(--tinta-suave);font-size:.78rem}
+.herr-cap[aria-pressed="true"]{border-color:var(--verde-bosque);box-shadow:inset 0 0 0 1px var(--verde-bosque);background:#fff}
+
+/* pregunta */
+.herr-tarjeta{background:#fff;border:1px solid var(--linea);border-top:5px solid var(--verde-bosque);border-radius:6px;padding:clamp(1.2rem,3vw,2rem);max-width:760px}
+.herr-barra{height:6px;background:var(--verde-claro);border-radius:3px;overflow:hidden;margin:.4rem 0 1.2rem}
+.herr-barra i{display:block;height:100%;background:var(--verde-bosque);transition:width .4s}
+.herr-meta{font:600 .72rem var(--cuerpo,inherit);letter-spacing:.14em;text-transform:uppercase;color:var(--verde-eucalipto);margin:0}
+.herr-q{font:600 1.2rem/1.35 var(--display);color:var(--verde-profundo);margin:.4rem 0 1.2rem}
+.herr-ops{display:grid;gap:.6rem;list-style:none;padding:0;margin:0}
+.herr-op{width:100%;text-align:left;display:grid;grid-template-columns:1.9rem 1fr;gap:.6rem;padding:.8rem .9rem;border:1.5px solid var(--linea);border-radius:6px;background:var(--crema-claro);font:inherit;color:var(--tinta);cursor:pointer;line-height:1.4}
+.herr-op:hover:not(:disabled){border-color:var(--verde-bosque)}
+.herr-op b{font:700 .9rem var(--display);color:var(--verde-bosque)}
+.herr-op.ok{border-color:var(--verde-bosque);background:var(--verde-claro)}
+.herr-op.no{border-color:#8C4A41;background:#f6e9e4}
+.herr-op:disabled{cursor:default}
+.herr-op.apag{opacity:.55}
+.herr-fb{margin:1rem 0 0;padding:.9rem 1rem;border-left:4px solid var(--mostaza);background:var(--crema-claro);border-radius:0 6px 6px 0;font-size:.95rem}
+.herr-fb b{display:block;margin-bottom:.2rem}
+.herr-fb.bien{border-left-color:var(--verde-bosque)}
+.herr-fb small{display:block;color:var(--tinta-suave);margin-top:.4rem}
+.herr-acciones{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+
+/* resultado */
+.herr-res{display:grid;grid-template-columns:150px 1fr;gap:1.6rem;align-items:center;max-width:760px}
+@media(max-width:560px){.herr-res{grid-template-columns:1fr}}
+.herr-anillo{width:150px;height:150px}
+.herr-anillo text{font-family:var(--display)}
+.herr-detalle{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.4rem;max-width:760px}
+.herr-detalle li{display:grid;grid-template-columns:1.6rem 1fr;gap:.5rem;font-size:.92rem;padding:.5rem 0;border-top:1px solid var(--filete-suave)}
+.herr-detalle .v{color:var(--verde-bosque);font-weight:700}.herr-detalle .x{color:#8C4A41;font-weight:700}
+
+/* perlas */
+.herr-filtros{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
+.herr-filtros button{padding:.45rem .9rem;border:1px solid var(--linea);border-radius:999px;background:var(--crema-claro);font:600 .8rem var(--cuerpo,inherit);color:var(--tinta);cursor:pointer}
+.herr-filtros button[aria-pressed="true"]{background:var(--verde-bosque);border-color:var(--verde-bosque);color:var(--crema-claro)}
+.herr-contador{color:var(--tinta-suave);font-size:.9rem;margin:0 0 1rem}
+.herr-perlas{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:1rem}
+.herr-perla{border:1px solid var(--linea);border-radius:8px;background:#fff;min-height:210px;padding:1.1rem;text-align:left;font:inherit;color:var(--tinta);display:flex;flex-direction:column;gap:.6rem}
+.herr-perla .ic{width:54px;height:54px}.herr-perla .ic svg{width:100%;height:100%}
+.herr-perla b{font:600 .6rem var(--cuerpo,inherit);letter-spacing:.16em;text-transform:uppercase;color:var(--verde-eucalipto)}
+.herr-perla h3{font:600 1.05rem/1.25 var(--display);color:var(--verde-profundo);margin:0}
+.herr-perla p{font-size:.92rem;margin:0;color:var(--tinta)}
+.herr-perla .herr-pie{margin-top:auto;padding-top:.8rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.herr-btn{font:600 .76rem var(--cuerpo,inherit);padding:.4rem .85rem;border-radius:999px;border:1px solid var(--verde-salvia);background:var(--crema-claro);color:var(--verde-profundo);cursor:pointer}
+.herr-btn:hover{border-color:var(--verde-bosque)}
+.herr-btn[aria-pressed="true"]{background:var(--verde-bosque);border-color:var(--verde-bosque);color:var(--crema-claro)}
+.herr-perla.sabida{border-color:var(--verde-bosque);background:var(--verde-claro)}
+
+/* esquemas */
+.herr-figuras{display:grid;gap:1.4rem;max-width:880px}
+.herr-fig{background:#fff;border:1px solid var(--linea);border-top:4px solid var(--verde-bosque);border-radius:6px;padding:1.2rem}
+.herr-fig svg{width:100%;height:auto;display:block}
+.herr-fig h3{font:600 1.05rem var(--display);color:var(--verde-profundo);margin:0 0 .6rem}
+.herr-fig p{font-size:.86rem;color:var(--tinta-suave);margin:.6rem 0 0}
+
+/* enviar */
+.herr-enviar .formulario{max-width:680px}
+.herr-resumen{grid-column:1/-1;background:var(--crema-claro);border:1px dashed var(--verde-salvia);border-radius:6px;padding:.9rem 1rem;font-size:.9rem;white-space:pre-line;color:var(--tinta)}
+.aviso-educativo{font-size:.86rem;color:var(--tinta-suave);max-width:70ch;margin:0}
+@media print{.herr-pestanas,.herr-caps,.herr-enviar{display:none}}
+@media(prefers-reduced-motion:reduce){.herr-barra i{transition:none}}
