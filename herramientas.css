@@ -76,3 +76,45 @@
 .aviso-educativo{font-size:.86rem;color:var(--tinta-suave);max-width:70ch;margin:0}
 @media print{.herr-pestanas,.herr-caps,.herr-enviar{display:none}}
 @media(prefers-reduced-motion:reduce){.herr-barra i{transition:none}}
+
+/* acceso (ventana de registro) */
+.acceso{border:0;border-radius:10px;padding:0;max-width:min(560px,calc(100vw - 2rem));width:100%;background:var(--crema-claro);color:var(--tinta);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.acceso::backdrop{background:rgba(23,63,51,.72)}
+.acceso-forma{padding:clamp(1.2rem,4vw,2rem);display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+@media(max-width:520px){.acceso-forma{grid-template-columns:1fr}}
+.acceso-cab,.acceso-acciones{grid-column:1/-1}
+.acceso-motivo{margin:.4rem 0 0;color:var(--tinta-suave);font-size:.95rem}
+.acceso-acciones{display:flex;gap:.7rem;flex-wrap:wrap}
+.acceso select{width:100%;padding:.7rem;border:1px solid var(--linea);border-radius:6px;background:#fff;font:inherit}
+.herr-candado{border:1px dashed var(--verde-salvia);border-radius:8px;background:var(--crema-claro);padding:clamp(1.2rem,3vw,2rem);max-width:640px}
+.herr-candado h3{font:600 1.2rem var(--display);color:var(--verde-profundo);margin:0 0 .5rem}
+.herr-candado p{margin:0 0 1rem;color:var(--tinta-suave)}
+
+/* calculadora */
+.calc-reja{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.2rem,4vw,3rem);align-items:start}
+@media(max-width:860px){.calc-reja{grid-template-columns:1fr}}
+.calc-forma .campo{display:grid;gap:.35rem;margin-bottom:.9rem}
+.calc-forma input,.calc-forma select{width:100%;padding:.75rem;border:1px solid var(--linea);border-radius:6px;background:#fff;font:inherit;font-size:1.05rem}
+.calc-forma small{color:var(--tinta-suave)}
+.calc-fila{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+@media(max-width:420px){.calc-fila{grid-template-columns:1fr}}
+.calc-nota{background:var(--verde-claro);border-left:4px solid var(--verde-bosque);padding:.7rem .9rem;border-radius:0 6px 6px 0;font-size:.9rem;margin:.2rem 0 1rem}
+.calc-error{color:#8C4A41;font-weight:600;margin:.8rem 0 0}
+.calc-res{background:#fff;border:1px solid var(--linea);border-top:5px solid var(--mostaza);border-radius:8px;padding:clamp(1.1rem,3vw,1.8rem);min-height:260px}
+.calc-vacio p{color:var(--tinta-suave)}.calc-pie{font-size:.85rem}
+.calc-grande{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:.2rem 0 .6rem}
+.calc-grande span{font:700 clamp(2.8rem,9vw,4rem)/1 var(--display);color:var(--verde-profundo)}
+.calc-grande small{color:var(--tinta-suave);font-size:1rem}
+.calc-jeringa{width:100%;height:auto;margin:.2rem 0 1rem}
+.calc-datos{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1rem;margin:0 0 1rem}
+.calc-datos div{border-top:1px solid var(--filete-suave);padding-top:.5rem}
+.calc-datos dt{font:600 .68rem var(--cuerpo,inherit);letter-spacing:.14em;text-transform:uppercase;color:var(--verde-eucalipto)}
+.calc-datos dd{margin:.15rem 0 0;font-weight:700;color:var(--verde-profundo)}
+.calc-pasos summary{cursor:pointer;font-weight:600;color:var(--verde-bosque)}
+.calc-pasos ol{padding-left:1.2rem;display:grid;gap:.4rem;font-size:.92rem}
+.calc-aviso{background:#f6e9e4;border-left:4px solid #8C4A41;padding:.7rem .9rem;border-radius:0 6px 6px 0;font-size:.92rem}
+.calc-tabla-envol{overflow-x:auto;margin:0 0 1.6rem}.calc-tabla-envol h3{font:600 1.1rem var(--display);color:var(--verde-profundo);margin:1rem 0 .5rem}
+.calc-tabla{border-collapse:collapse;width:100%;min-width:640px;font-size:.88rem}
+.calc-tabla th{background:var(--verde-bosque);color:var(--crema-claro);text-align:left;padding:.5rem .6rem;font-weight:600}
+.calc-tabla td{padding:.45rem .6rem;border-bottom:1px solid var(--filete-suave)}
+.calc-tabla tbody tr:nth-child(even){background:var(--verde-claro)}

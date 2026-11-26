@@ -1,6 +1,6 @@
 /* Herramientas del libro «Péptidos: descifra tu cuerpo».
-   Autoevaluación por capítulo, perlas en tarjetas y esquemas. Todo se calcula en el navegador;
-   solo al pedirlo se envía el resultado, por el mismo destino del registro (sitio.json → formularios.masterclass).
+   Autoevaluación por capítulo, perlas en tarjetas y esquemas. Se entra con nombre y correo (acceso.js);
+   las perlas y los esquemas NO viajan en la página: se cargan después del registro (ver Operacion/CRM_clientes.md).
    Los datos los genera Libro_Marco/Produccion/peptidos/nueva_edicion/exportar_web.py. */
 (() => {
   'use strict';
@@ -30,7 +30,9 @@
   function abrir(panel) {
     pestanas.forEach(t => t.setAttribute('aria-selected', t.dataset.panel === panel ? 'true' : 'false'));
     document.querySelectorAll('.herr-panel').forEach(p => { p.hidden = p.id !== 'p-' + panel; });
+    if (PROTEGIDAS.includes(panel)) abrirProtegido(panel); else if (panel === 'clases') Acceso.evento('clases_vistas', '');
   }
+  const PROTEGIDAS = ['perlas', 'esquemas'];
   pestanas.forEach(t => t.addEventListener('click', () => { abrir(t.dataset.panel); history.replaceState(null, '', '#' + t.dataset.panel); }));
   pestanas.forEach((t, i) => t.addEventListener('keydown', e => {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
@@ -51,7 +53,12 @@
     }));
   }
   function iniciar(n) {
+    Acceso.pedir({ origen: 'herramienta-libro-peptidos', motivo: 'Para practicar el capítulo y guardar tu avance, deja tu nombre y correo. Es gratis y solo se pide una vez.' })
+      .then(() => empezar(n)).catch(() => {});
+  }
+  function empezar(n) {
     capActual = n;
+    Acceso.evento('autoevaluacion_inicio', 'Capítulo ' + n);
     const c = D.caps.find(x => x.n === n);
     est = { c, i: 0, aciertos: [], orden: c.preguntas.map(q => barajar(q.op.map((_, k) => k))) };
     pintarCaps(); pregunta();
@@ -93,6 +100,7 @@
     const { c, aciertos } = est, n = aciertos.filter(Boolean).length, t = total(c);
     if (memoria.mejor[c.n] == null || n > memoria.mejor[c.n]) memoria.mejor[c.n] = n;
     memoria.ultimo = memoria.ultimo || {}; memoria.ultimo[c.n] = n; guardar(memoria);
+    Acceso.evento('autoevaluacion_resultado', `Capítulo ${c.n}: ${n} de ${t}`);
     const msg = n === t ? 'Dominas este capítulo.' : n >= Math.ceil(t * .6) ? 'Vas bien. Repasa las preguntas que fallaste.' : 'Conviene releer el capítulo y volver a intentarlo.';
     const detalle = el('ul', { class: 'herr-detalle' }, c.preguntas.map((q, i) => el('li', {},
       el('span', { class: aciertos[i] ? 'v' : 'x', 'aria-label': aciertos[i] ? 'acertada' : 'fallada' }, aciertos[i] ? '✓' : '✗'),
@@ -103,69 +111,74 @@
       el('div', { class: 'herr-res' }, el('div', { html: anillo(n / t) }), el('div', {}, el('h2', { class: 'herr-q', style: 'margin-top:0' }, `${n} de ${t} respuestas correctas`), el('p', {}, msg))),
       detalle,
       el('div', { class: 'herr-acciones' },
-        el('button', { class: 'boton boton-lleno', type: 'button', onclick: () => { mostrarEnvio(); } }, 'Enviar mi resultado'),
+        el('button', { class: 'boton boton-lleno', type: 'button', id: 'btn-enviar', onclick: enviarResultado }, 'Enviar mi resultado al equipo'),
         el('button', { class: 'boton boton-suave', type: 'button', onclick: () => iniciar(c.n) }, 'Repetir el capítulo'), sig)));
-    pintarCaps(); prepararEnvio();
+    pintarCaps();
   }
 
-  /* ---------- perlas ---------- */
+  /* ---------- perlas y esquemas (protegidos: se cargan tras el registro) ---------- */
+  let P = null;
   let filtro = 0;
-  const filtrosEl = $('#perlas-filtros'), perlasEl = $('#perlas-zona'), contEl = $('#perlas-cont');
+  const filtrosEl = $('#perlas-filtros'), perlasEl = $('#perlas-zona'), contEl = $('#perlas-cont'), figEl = $('#figuras-zona');
+  function candado(panel) {
+    const z = panel === 'perlas' ? perlasEl : figEl;
+    if (panel === 'perlas') { filtrosEl.replaceChildren(); contEl.textContent = ''; }
+    z.replaceChildren(el('div', { class: 'herr-candado' },
+      el('h3', {}, panel === 'perlas' ? 'Las 21 perlas clínicas del libro' : 'Los esquemas del libro'),
+      el('p', {}, 'Este material es para lectores del libro y asistentes a las clases del Dr. Marco Sosa. Deja tu nombre y correo para abrirlo; es gratis.'),
+      el('button', { class: 'boton boton-lleno', type: 'button', onclick: () => abrirProtegido(panel) }, 'Entrar con mi correo')));
+  }
+  function cargarProtegido() {
+    if (P) return Promise.resolve(P);
+    return new Promise((ok, mal) => {
+      const sc = document.createElement('script'); sc.src = 'herramientas-peptidos-protegido.js';
+      sc.onload = () => { P = window.HERR_PROT; window.HERR_PROT = null; P ? ok(P) : mal(new Error('vacío')); };
+      sc.onerror = () => mal(new Error('no cargó')); document.head.append(sc);
+    });
+  }
+  function abrirProtegido(panel) {
+    Acceso.pedir({ origen: 'herramienta-libro-peptidos', motivo: 'Para ver las perlas y los esquemas, deja tu nombre y correo. Es gratis y solo se pide una vez.' })
+      .then(cargarProtegido)
+      .then(() => { panel === 'perlas' ? pintarPerlas() : pintarFiguras(); Acceso.evento(panel + '_vistos', ''); })
+      .catch(() => candado(panel));
+  }
   function pintarPerlas() {
     filtrosEl.replaceChildren(...[0, 1, 2, 3, 4, 5, 6].map(n => el('button', { type: 'button', 'aria-pressed': filtro === n ? 'true' : 'false', onclick: () => { filtro = n; pintarPerlas(); } }, n === 0 ? 'Todas' : 'Capítulo ' + n)));
     const sab = Object.keys(memoria.perlas).filter(k => memoria.perlas[k]).length;
-    contEl.textContent = `Dominas ${sab} de ${D.perlas.length} perlas.`;
-    perlasEl.replaceChildren(...D.perlas.filter(p => !filtro || p.cap === filtro).map(p => {
+    contEl.textContent = `Dominas ${sab} de ${P.perlas.length} perlas.`;
+    perlasEl.replaceChildren(...P.perlas.filter(p => !filtro || p.cap === filtro).map(p => {
       const abierta = !!p._abierta, sabida = !!memoria.perlas[p.n];
-      const ic = el('div', { class: 'ic', html: D.iconos[p.icono] || '' });
-      const card = el('article', { class: 'herr-perla' + (sabida ? ' sabida' : '') },
+      const ic = el('div', { class: 'ic', html: P.iconos[p.icono] || '' });
+      return el('article', { class: 'herr-perla' + (sabida ? ' sabida' : '') },
         ic, el('b', {}, `Cap. ${p.cap} · perla ${p.n}`), el('h3', {}, p.titulo),
         abierta ? el('p', {}, p.texto) : null,
         el('div', { class: 'herr-pie' },
-          el('button', { class: 'herr-btn', type: 'button', 'aria-expanded': abierta ? 'true' : 'false', onclick: () => { p._abierta = !p._abierta; pintarPerlas(); } }, abierta ? 'Ocultar' : 'Ver texto'),
+          el('button', { class: 'herr-btn', type: 'button', 'aria-expanded': abierta ? 'true' : 'false', onclick: () => { p._abierta = !p._abierta; if (p._abierta) Acceso.evento('perla_abierta', `Perla ${p.n}: ${p.titulo}`); pintarPerlas(); } }, abierta ? 'Ocultar' : 'Ver texto'),
           el('button', { class: 'herr-btn', type: 'button', 'aria-pressed': sabida ? 'true' : 'false', onclick: () => { memoria.perlas[p.n] = !memoria.perlas[p.n]; guardar(memoria); pintarPerlas(); } }, sabida ? '✓ La sé' : 'La sé')));
-      return card;
     }));
   }
+  function pintarFiguras() {
+    figEl.replaceChildren(...P.figuras.map(f => el('figure', { class: 'herr-fig', style: 'margin:0' }, el('h3', {}, f.titulo), el('div', { html: f.svg }), el('p', {}, f.pie))));
+  }
 
-  /* ---------- esquemas ---------- */
-  $('#figuras-zona').replaceChildren(...D.figuras.map(f => el('figure', { class: 'herr-fig', style: 'margin:0' }, el('h3', {}, f.titulo), el('div', { html: f.svg }), el('p', {}, f.pie))));
-
-  /* ---------- enviar resultado ---------- */
-  const seccionEnvio = $('#enviar'), forma = $('#herr-form'), estadoEl = $('#h-estado'), wa = $('#h-wa');
+  /* ---------- enviar el resultado (con los datos del registro) ---------- */
   function resumenTexto() {
     const filas = Object.keys(memoria.ultimo || {}).sort().map(k => `Capítulo ${k}: ${memoria.ultimo[k]} de ${D.caps[k - 1].preguntas.length}`);
     const sab = Object.keys(memoria.perlas).filter(k => memoria.perlas[k]).length;
-    return ['Autoevaluación del libro Péptidos: descifra tu cuerpo', ...(filas.length ? filas : ['Sin capítulos completados']), `Perlas que dice dominar: ${sab} de ${D.perlas.length}`].join('\n');
+    return ['Autoevaluación del libro Péptidos: descifra tu cuerpo', ...(filas.length ? filas : ['Sin capítulos completados']), `Perlas que dice dominar: ${sab} de 21`].join(' · ');
   }
-  function prepararEnvio() {
-    const t = resumenTexto(); $('#h-resumen').textContent = t; $('#h-interes').value = t.replace(/\n/g, ' · ');
-    const base = wa.getAttribute('href') || '';
-    if (base && base !== '#') wa.href = base + (base.includes('?') ? '&' : '?') + 'text=' + encodeURIComponent('Hola, hice las herramientas del libro Péptidos: descifra tu cuerpo.\n' + t);
-    else wa.hidden = true;
+  async function enviarResultado(e) {
+    const b = e.currentTarget; b.disabled = true; b.textContent = 'Enviando…';
+    const ok = await Acceso.evento('resultado_enviado', resumenTexto(), true);
+    b.textContent = ok ? 'Resultado enviado. Gracias.' : 'No pudimos enviarlo. Inténtalo de nuevo.'; if (!ok) b.disabled = false;
   }
-  function mostrarEnvio() { seccionEnvio.hidden = false; prepararEnvio(); seccionEnvio.scrollIntoView({ behavior: 'smooth', block: 'start' }); $('#h-nombre').focus({ preventScroll: true }); }
   const params = new URLSearchParams(location.search);
-  ['utm_source', 'utm_medium', 'utm_campaign'].forEach(k => { const i = forma.elements[k]; if (i) i.value = params.get(k) || ''; });
-  const destino = (forma.getAttribute('action') || '').trim();
-  forma.addEventListener('submit', async e => {
-    e.preventDefault();
-    const boton = forma.querySelector('button[type="submit"]');
-    prepararEnvio();
-    if (!destino || destino.startsWith('{{')) { estadoEl.textContent = 'El envío no está disponible ahora. Puedes mandar tu resultado por WhatsApp.'; estadoEl.className = 'formulario-estado error'; return; }
-    boton.disabled = true; estadoEl.textContent = 'Enviando…'; estadoEl.className = 'formulario-estado';
-    try {
-      await fetch(destino, { method: 'POST', body: new FormData(forma), mode: 'no-cors' });
-      estadoEl.textContent = 'Listo, recibimos tu resultado. Gracias por practicar.'; estadoEl.className = 'formulario-estado ok';
-    } catch (_) {
-      boton.disabled = false; estadoEl.textContent = 'No pudimos enviar. Revisa tu conexión e inténtalo de nuevo.'; estadoEl.className = 'formulario-estado error';
-    }
-  });
 
   /* ---------- arranque ---------- */
-  pintarCaps(); pintarPerlas();
+  pintarCaps(); candado('perlas'); candado('esquemas');
   const cap = parseInt(params.get('cap'), 10), hash = location.hash.replace('#', '');
-  if (['perlas', 'esquemas', 'clases', 'auto'].includes(hash)) abrir(hash);
-  if (cap >= 1 && cap <= D.caps.length) { abrir('auto'); iniciar(cap); }
+  if (['clases', 'auto'].includes(hash)) abrir(hash);
+  else if (PROTEGIDAS.includes(hash)) { pestanas.forEach(t => t.setAttribute('aria-selected', t.dataset.panel === hash ? 'true' : 'false')); document.querySelectorAll('.herr-panel').forEach(p => { p.hidden = p.id !== 'p-' + hash; }); }
+  if (cap >= 1 && cap <= D.caps.length) { abrir('auto'); if (Acceso.cliente()) iniciar(cap); else zona.replaceChildren(el('p', { class: 'herr-guia' }, 'Elige un capítulo para empezar.')); }
   else zona.replaceChildren(el('p', { class: 'herr-guia' }, 'Elige un capítulo para empezar.'));
 })();

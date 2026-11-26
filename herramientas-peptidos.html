@@ -77,7 +77,7 @@
       <h1>Péptidos: <em class="acento">descifra tu cuerpo</em></h1>
       <p class="entrada">
         Practica lo que leíste: autoevaluación por capítulo, las 21 perlas en tarjetas y los esquemas del libro.
-        Tus respuestas se calculan en tu navegador. Si quieres, al final envías tu resultado por correo.
+        Para entrar dejas tu nombre y correo una sola vez: así guardamos tu avance y te orientamos hacia la clase o el curso que más te sirva.
       </p>
     </div>
     <img class="herr-portada" src="assets/libro-peptidos-portada.jpg" width="640" height="960" alt="Portada del libro Péptidos: descifra tu cuerpo" loading="eager">
@@ -139,50 +139,6 @@
         
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== Enviar el resultado ===== -->
-<section class="seccion seccion-verde herr-enviar" id="enviar" hidden>
-  <div class="envoltura">
-    <p class="rotulo">Tu resultado</p>
-    <h2 class="t-grande">Envíalo para que quede registrado</h2>
-    <p class="entrada-clara">Dejas tu contacto y el equipo del Dr. Sosa recibe el resumen de lo que practicaste. Así pueden orientarte hacia la clase o el curso que más te sirva. No reemplaza una consulta.</p>
-    <form class="formulario" id="herr-form" method="post" action="https://script.google.com/macros/s/AKfycbwEL4f2gnd-rn-9zBLa86pQoiSxLk0jzFlZespdhnEGVPBkZ0_LNBFhuRnrzF1fnMvrJw/exec">
-      <div class="campo campo-ancho">
-        <label for="h-nombre">Nombre completo</label>
-        <input type="text" id="h-nombre" name="nombre" autocomplete="name" required>
-      </div>
-      <div class="campo campo-ancho">
-        <label for="h-correo">Correo electrónico</label>
-        <input type="email" id="h-correo" name="correo" autocomplete="email" required>
-      </div>
-      <div class="campo">
-        <label for="h-whatsapp">WhatsApp con código de país (opcional)</label>
-        <input type="tel" id="h-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="+57 300 000 0000">
-      </div>
-      <div class="campo">
-        <label for="h-pais">País (opcional)</label>
-        <input type="text" id="h-pais" name="pais" autocomplete="country-name">
-      </div>
-      <input type="hidden" name="origen" value="herramienta-libro-peptidos">
-      <input type="hidden" name="pagina" value="herramientas-peptidos.html">
-      <input type="hidden" name="perfil" value="Lector del libro Péptidos: descifra tu cuerpo">
-      <input type="hidden" name="interes" id="h-interes" value="">
-      <input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value="">
-      <div class="consentimiento">
-        <input type="checkbox" id="h-autorizacion" name="autorizacion" value="si" required>
-        <label for="h-autorizacion">Autorizo el tratamiento de mis datos personales para recibir el resumen de mi práctica y contacto del equipo del Dr. Marco Sosa sobre el libro y sus clases, en los términos de la <a href="privacidad.html">política de privacidad</a>. Puedo revocarlo cuando quiera.</label>
-      </div>
-      <div class="consentimiento">
-        <input type="checkbox" id="h-comunicaciones" name="comunicaciones" value="si">
-        <label for="h-comunicaciones">Opcional: quiero recibir información sobre otras clases y cursos del Dr. Marco Sosa.</label>
-      </div>
-      <div class="herr-resumen" id="h-resumen" aria-live="polite"></div>
-      <button class="boton boton-lleno boton-grande" type="submit">Enviar mi resultado</button>
-      <a class="boton boton-suave boton-grande" id="h-wa" href="https://wa.me/573192894536" target="_blank" rel="noopener">Enviar por WhatsApp</a>
-      <p class="formulario-estado" id="h-estado" role="status" aria-live="polite"></p>
-    </form>
   </div>
 </section>
 
@@ -258,6 +214,61 @@
     </p>
   </div>
 </footer>
+<!-- Ventana de acceso a las herramientas: pide nombre y correo una sola vez. La maneja acceso.js.
+     El destino del registro es sitio.json → formularios.masterclass (publicar.py lo resuelve en el action). -->
+<dialog class="acceso" id="acceso" aria-labelledby="acc-titulo">
+  <form class="formulario acceso-forma" id="acc-form" method="post" action="https://script.google.com/macros/s/AKfycbwEL4f2gnd-rn-9zBLa86pQoiSxLk0jzFlZespdhnEGVPBkZ0_LNBFhuRnrzF1fnMvrJw/exec">
+    <div class="campo-ancho acceso-cab">
+      <p class="rotulo" id="acc-rotulo">Acceso gratuito</p>
+      <h2 class="t-grande" id="acc-titulo">Deja tu correo para continuar</h2>
+      <p class="acceso-motivo" id="acc-motivo">Este material es para quienes leen el libro o toman las clases del Dr. Marco Sosa.</p>
+    </div>
+    <div class="campo campo-ancho">
+      <label for="acc-nombre">Nombre completo</label>
+      <input type="text" id="acc-nombre" name="nombre" autocomplete="name" required>
+    </div>
+    <div class="campo campo-ancho">
+      <label for="acc-correo">Correo electrónico</label>
+      <input type="email" id="acc-correo" name="correo" autocomplete="email" required>
+    </div>
+    <div class="campo">
+      <label for="acc-perfil">Soy</label>
+      <select id="acc-perfil" name="perfil" required>
+        <option value="">Elige una opción</option>
+        <option>Profesional de la salud</option>
+        <option>Estudiante de salud</option>
+        <option>Paciente o persona interesada</option>
+        <option>Otro</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="acc-whatsapp">WhatsApp (opcional)</label>
+      <input type="tel" id="acc-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="+57 300 000 0000">
+    </div>
+    <div class="campo campo-ancho">
+      <label for="acc-pais">País (opcional)</label>
+      <input type="text" id="acc-pais" name="pais" autocomplete="country-name">
+    </div>
+    <div class="consentimiento">
+      <input type="checkbox" id="acc-autorizacion" name="autorizacion" value="si" required>
+      <label for="acc-autorizacion">Autorizo el tratamiento de mis datos personales para darme acceso a este material y para que el equipo del Dr. Marco Sosa me contacte sobre el libro, sus clases y cursos, en los términos de la <a href="privacidad.html">política de privacidad</a>. Puedo revocarlo cuando quiera.</label>
+    </div>
+    <div class="consentimiento">
+      <input type="checkbox" id="acc-comunicaciones" name="comunicaciones" value="si">
+      <label for="acc-comunicaciones">Quiero recibir novedades por correo (opcional).</label>
+    </div>
+    <input type="hidden" name="origen" id="acc-origen" value="">
+    <input type="hidden" name="pagina" id="acc-pagina" value="">
+    <input type="hidden" name="evento" value="registro">
+    <input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value="">
+    <p class="formulario-estado" id="acc-estado" role="status" aria-live="polite"></p>
+    <div class="acceso-acciones campo-ancho">
+      <button class="boton boton-lleno" type="submit">Entrar</button>
+      <button class="boton boton-suave" type="button" id="acc-cerrar">Ahora no</button>
+    </div>
+  </form>
+</dialog>
+<script src="acceso.js"></script>
 <script src="herramientas-peptidos-datos.js"></script>
 <script src="herramientas-peptidos.js"></script>
 </body>

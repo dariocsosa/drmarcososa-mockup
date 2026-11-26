@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de dilución y dosis de péptidos | Dr. Marco Sosa</title>
+<meta name="description" content="Calcula la concentración, las unidades de jeringa y las dosis por vial de un péptido reconstituido. Herramienta de la masterclass del Dr. Marco Sosa.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="estilos.css">
+<script>
+  // Solo si hay JavaScript se habilita el estado oculto del revelado.
+  // Sin esto, un fallo del script dejaría la página en blanco.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js');
+  }
+</script>
+<link rel="stylesheet" href="herramientas.css">
+
+<!-- ===== generado por Web/publicar.py — no editar acá ===== -->
+<link rel="canonical" href="https://drmarcososa.com/calculadora-peptidos.html">
+<meta name="robots" content="noindex,nofollow">
+<meta name="author" content="Dr. Marco Aurelio Sosa Giraldo">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Dr. Marco Sosa">
+<meta property="og:title" content="Calculadora de dilución y dosis de péptidos | Dr. Marco Sosa">
+<meta property="og:description" content="Calcula la concentración, las unidades de jeringa y las dosis por vial de un péptido reconstituido. Herramienta de la masterclass del Dr. Marco Sosa.">
+<meta property="og:url" content="https://drmarcososa.com/calculadora-peptidos.html">
+<meta property="og:image" content="https://drmarcososa.com/assets/dr-marco-sosa-1000.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calculadora de dilución y dosis de péptidos | Dr. Marco Sosa">
+<meta name="twitter:description" content="Calcula la concentración, las unidades de jeringa y las dosis por vial de un péptido reconstituido. Herramienta de la masterclass del Dr. Marco Sosa.">
+<meta name="twitter:image" content="https://drmarcososa.com/assets/dr-marco-sosa-1000.jpg">
+<link rel="icon" href="assets/sello-redondo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/sello-redondo.png">
+<meta name="theme-color" content="#173F33">
+<!-- ===== fin del bloque generado ===== -->
+</head>
+<body>
+<aside class="franja" aria-label="Masterclass gratuita en vivo online">
+  <div class="envoltura franja-fila">
+    <p class="franja-mensaje">
+      <span class="franja-titulo">Masterclasses gratuitas <b>en vivo</b></span>
+      <span class="franja-fechas">27, 28 y 29 de octubre · 7:00 p. m. hora Colombia</span>
+    </p>
+    <a class="boton boton-lleno" href="masterclass.html#videos" data-origen="franja">Ver las masterclasses</a>
+  </div>
+</aside>
+<nav class="nav" aria-label="Principal">
+  <div class="envoltura nav-fila">
+    <a class="nav-marca" href="index.html">
+      <span class="nav-marca-nombre">Dr. Marco Sosa</span>
+      <span class="nav-marca-oficio">Medicina integrativa</span>
+    </a>
+    <button class="nav-boton" type="button" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-barras" aria-hidden="true"></span>
+      <span class="solo-lectores">Menú</span>
+    </button>
+    <ul class="nav-enlaces" id="nav-menu">
+      <li><a href="masterclass.html" data-nav="masterclasses">Masterclasses</a></li>
+      <li><a href="consultas.html" data-nav="consultas">Consultas</a></li>
+      <li><a href="diplomatura.html" data-nav="formacion">Formación</a></li>
+      <li><a href="recursos.html" data-nav="recursos" aria-current="page">Recursos</a></li>
+      <li><a href="sobre.html" data-nav="sobre">Sobre el Dr. Marco</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<header class="portada reticula grano" style="padding-block: clamp(2rem, 5vw, 3.6rem)">
+  <div class="envoltura">
+    <p class="rotulo">Herramienta · masterclass</p>
+    <h1>Calculadora de <em class="acento">dilución y dosis</em></h1>
+    <p class="entrada">
+      Del vial a la jeringa: concentración, unidades y dosis por vial. Es el Excel de la masterclass del Dr. Marco Sosa,
+      hecho para usar desde el celular. Para ver los resultados dejas tu nombre y correo una sola vez.
+    </p>
+  </div>
+</header>
+
+<section class="seccion seccion-clara herr" id="calculadora">
+  <div class="envoltura calc-reja">
+    <form class="calc-forma" id="calc-form" novalidate>
+      <h2 class="t-grande">1. Tu vial</h2>
+      <div class="campo calc-ancho">
+        <label for="c-pept">Péptido y presentación</label>
+        <select id="c-pept" disabled><option value="">Se activa al ingresar con tu correo</option></select>
+        <small>O escribe tus propios datos abajo.</small>
+      </div>
+      <div class="calc-fila">
+        <div class="campo"><label for="c-mg">Péptido en el vial (mg)</label><input id="c-mg" inputmode="decimal" autocomplete="off" placeholder="10"></div>
+        <div class="campo"><label for="c-bac">Agua bacteriostática (mL)</label><input id="c-bac" inputmode="decimal" autocomplete="off" placeholder="2"></div>
+      </div>
+      <h2 class="t-grande" style="margin-top:1.4rem">2. La dosis</h2>
+      <div class="calc-fila">
+        <div class="campo"><label for="c-dosis">Dosis por aplicación</label><input id="c-dosis" inputmode="decimal" autocomplete="off" placeholder="0,25"></div>
+        <div class="campo"><label for="c-unidad">Unidad de la dosis</label>
+          <select id="c-unidad"><option value="mg">mg</option><option value="mcg">mcg (µg)</option></select></div>
+      </div>
+      <p class="calc-nota" id="c-ref" hidden></p>
+      <button class="boton boton-lleno boton-grande" type="submit" id="c-calcular">Calcular</button>
+      <p class="calc-error" id="c-error" role="alert" hidden></p>
+    </form>
+
+    <div class="calc-res" id="c-res" aria-live="polite">
+      <div class="calc-vacio" id="c-vacio">
+        <p>Completa tu vial y la dosis, y pulsa <strong>Calcular</strong>.</p>
+        <p class="calc-pie">Jeringa de insulina de 100 unidades (1 mL). Cada unidad son 0,01 mL.</p>
+      </div>
+      <div id="c-salida" hidden>
+        <p class="herr-meta">Resultado</p>
+        <div class="calc-grande"><span id="r-unid">—</span><small>unidades en la jeringa</small></div>
+        <svg class="calc-jeringa" viewBox="0 0 420 70" role="img" aria-label="Jeringa de 100 unidades con la zona dosificada" id="r-jer"></svg>
+        <dl class="calc-datos">
+          <div><dt>Concentración</dt><dd id="r-conc">—</dd></div>
+          <div><dt>Por unidad</dt><dd id="r-mcgu">—</dd></div>
+          <div><dt>Volumen a inyectar</dt><dd id="r-ml">—</dd></div>
+          <div><dt>Dosis por vial</dt><dd id="r-vial">—</dd></div>
+        </dl>
+        <details class="calc-pasos" open><summary>Así se calcula</summary><ol id="r-pasos"></ol></details>
+        <p class="calc-aviso" id="r-aviso" role="status" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-clara herr" id="tabla-sec">
+  <div class="envoltura">
+    <h2 class="t-grande">Tabla de presentaciones</h2>
+    <p class="herr-guia">Las presentaciones de la hoja del Dr. Marco con su dosis inicial de referencia. Toca «Usar» para llevarla a la calculadora.</p>
+    <div id="c-tabla"><div class="herr-candado"><h3>Tabla de presentaciones</h3><p>Deja tu nombre y correo para verla; es gratis.</p><button class="boton boton-lleno" type="button" id="c-abrir">Entrar con mi correo</button></div></div>
+  </div>
+</section>
+
+<section class="seccion seccion-verde">
+  <div class="envoltura">
+    <p class="rotulo">Para profundizar</p>
+    <h2 class="t-grande">Péptidos: descifra tu cuerpo</h2>
+    <p class="entrada-clara">El libro del Dr. Marco Sosa explica la farmacología práctica: solventes, reconstitución, diluciones y almacenamiento. <strong>50 % de descuento hasta el 30 de noviembre: $50.000 en lugar de $100.000.</strong></p>
+    <div class="acciones"><a class="boton boton-lleno boton-grande" href="libro.html#comprar" data-origen="calculadora-libro">Comprar el libro</a></div>
+  </div>
+</section>
+
+<section class="seccion seccion-clara">
+  <div class="envoltura">
+    <p class="aviso-educativo"><strong>Es una herramienta de cálculo, no una prescripción.</strong> La dosis, la frecuencia y el ciclo los define el médico tratante para cada paciente. Las dosis de la tabla son referencias usadas por el Dr. Marco Sosa en consulta. El estatus regulatorio varía por país: varios de estos compuestos no tienen aprobación sanitaria y la retatrutida está en investigación; verifica el de tu país. El Dr. Sosa es Director Científico de Lumineight y percibe una participación sobre sus ventas; se declara para que lo tengas en cuenta.</p>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie-reja">
+      <div>
+        <img src="assets/sello-redondo.png" alt="Sello del Dr. Marco Sosa" class="pie-sello" width="72" height="72">
+        <p class="pie-bio">
+          Dr. Marco Aurelio Sosa Giraldo. Médico, registro 050330. Universidad de Antioquia.
+          Magíster en Salud Pública. Máster en Medicina Integrativa. Docente universitario.
+        </p>
+      </div>
+      <div>
+        <h4>El sitio</h4>
+        <ul>
+          <li><a href="masterclass.html">Masterclasses</a></li>
+          <li><a href="consultas.html">Consultas</a></li>
+          <li><a href="diplomatura.html">Formación</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="sobre.html">Sobre el Dr. Marco</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="diplomatura.html">Diplomatura en Medicina Integrativa</a></li>
+          <li><a href="diplomatura.html#cursos">Cursos y precios</a></li>
+          <li><a href="diplomatura.html#practica">Práctica presencial</a></li>
+          <li><a href="red.html">La Red</a></li>
+          <li><a href="certificado.html">Verificar un certificado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/573192894536" target="_blank" rel="noopener">WhatsApp</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="consultas.html">Consultas</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="pie-legales">
+      <li><a href="terminos.html">Términos de uso</a></li>
+      <li><a href="privacidad.html">Aviso de privacidad</a></li>
+      <li><a href="datos.html">Tratamiento de datos</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="compras.html">Condiciones de compra</a></li>
+      <li><a href="devoluciones.html">Retracto y devoluciones</a></li>
+      <li><a href="aviso-educativo.html">Aviso educativo</a></li>
+    </ul>
+    <p class="pie-legal">
+      Los contenidos de este sitio son de carácter informativo y educativo. No constituyen
+      diagnóstico, tratamiento ni prescripción personalizada, y no reemplazan la consulta médica.
+      El Dr. Marco Sosa se desempeña como Director Científico de Lumineight, marca en cuyo
+      desarrollo de fórmulas participa y sobre cuyas ventas percibe una participación.
+      Solo se ofrecerán suplementos dietarios de administración oral que cuenten con registro
+      sanitario vigente. Los protocolos intravenosos se aplican únicamente en servicios de salud
+      habilitados.
+    </p>
+  </div>
+</footer>
+<!-- Ventana de acceso a las herramientas: pide nombre y correo una sola vez. La maneja acceso.js.
+     El destino del registro es sitio.json → formularios.masterclass (publicar.py lo resuelve en el action). -->
+<dialog class="acceso" id="acceso" aria-labelledby="acc-titulo">
+  <form class="formulario acceso-forma" id="acc-form" method="post" action="https://script.google.com/macros/s/AKfycbwEL4f2gnd-rn-9zBLa86pQoiSxLk0jzFlZespdhnEGVPBkZ0_LNBFhuRnrzF1fnMvrJw/exec">
+    <div class="campo-ancho acceso-cab">
+      <p class="rotulo" id="acc-rotulo">Acceso gratuito</p>
+      <h2 class="t-grande" id="acc-titulo">Deja tu correo para continuar</h2>
+      <p class="acceso-motivo" id="acc-motivo">Este material es para quienes leen el libro o toman las clases del Dr. Marco Sosa.</p>
+    </div>
+    <div class="campo campo-ancho">
+      <label for="acc-nombre">Nombre completo</label>
+      <input type="text" id="acc-nombre" name="nombre" autocomplete="name" required>
+    </div>
+    <div class="campo campo-ancho">
+      <label for="acc-correo">Correo electrónico</label>
+      <input type="email" id="acc-correo" name="correo" autocomplete="email" required>
+    </div>
+    <div class="campo">
+      <label for="acc-perfil">Soy</label>
+      <select id="acc-perfil" name="perfil" required>
+        <option value="">Elige una opción</option>
+        <option>Profesional de la salud</option>
+        <option>Estudiante de salud</option>
+        <option>Paciente o persona interesada</option>
+        <option>Otro</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="acc-whatsapp">WhatsApp (opcional)</label>
+      <input type="tel" id="acc-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="+57 300 000 0000">
+    </div>
+    <div class="campo campo-ancho">
+      <label for="acc-pais">País (opcional)</label>
+      <input type="text" id="acc-pais" name="pais" autocomplete="country-name">
+    </div>
+    <div class="consentimiento">
+      <input type="checkbox" id="acc-autorizacion" name="autorizacion" value="si" required>
+      <label for="acc-autorizacion">Autorizo el tratamiento de mis datos personales para darme acceso a este material y para que el equipo del Dr. Marco Sosa me contacte sobre el libro, sus clases y cursos, en los términos de la <a href="privacidad.html">política de privacidad</a>. Puedo revocarlo cuando quiera.</label>
+    </div>
+    <div class="consentimiento">
+      <input type="checkbox" id="acc-comunicaciones" name="comunicaciones" value="si">
+      <label for="acc-comunicaciones">Quiero recibir novedades por correo (opcional).</label>
+    </div>
+    <input type="hidden" name="origen" id="acc-origen" value="">
+    <input type="hidden" name="pagina" id="acc-pagina" value="">
+    <input type="hidden" name="evento" value="registro">
+    <input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value="">
+    <p class="formulario-estado" id="acc-estado" role="status" aria-live="polite"></p>
+    <div class="acceso-acciones campo-ancho">
+      <button class="boton boton-lleno" type="submit">Entrar</button>
+      <button class="boton boton-suave" type="button" id="acc-cerrar">Ahora no</button>
+    </div>
+  </form>
+</dialog>
+<script src="acceso.js"></script>
+<script src="calculadora-peptidos.js"></script>
+</body>
+</html>
